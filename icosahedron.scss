@@ -1,0 +1,114 @@
+@import "compass/css3";
+
+/*
+ * I made up an icosahedron with only css triangles
+ * Positionning is handled by a sass @for loop
+ * A nice hover effect 
+*/
+
+@mixin animation ($params) { 
+    -webkit-animation:$params;
+    -moz-animation:$params;
+}
+.spin { 
+    @include animation(spin 5s linear infinite); 
+}
+@-webkit-keyframes spin { 
+ from { -webkit-transform: rotateY(0deg) rotateX(-20deg); }
+ to { -webkit-transform: rotateY(360deg) rotateX(-20deg); } }
+@-moz-keyframes spin { 
+ from { -moz-transform: rotateY(0deg) rotateX(-20deg); }
+ to { -moz-transform: rotateY(360deg) rotateX(-20deg); } 
+}
+
+.icosahedron-wraper {
+    @include transform( rotate(-29deg) rotateX(0deg) );
+    
+    -webkit-perspective:2500px; 
+    -moz-perspective:2500px; 
+}
+
+$triangleColor:hotpink; 
+$triangleLength:20; 
+$triangleSize:198px; 
+$angle:360 / 5;
+
+.icosahedron {    
+    width:$triangleSize; height:$triangleSize; 
+    margin:130px auto 0; position:relative; 
+    -webkit-transform-style:preserve-3d; 
+    -moz-transform-style:preserve-3d; 
+    outline:1px solid lavender; 
+    
+    [class^="triangle-"] { 
+        position:absolute; top:0; 
+        width:0px; height:0px; 
+        border-left:$triangleSize/1.9 solid transparent; 
+        border-right:$triangleSize/1.9 solid transparent; 
+        border-bottom:$triangleSize solid $triangleColor; 
+        @include opacity(.4); 
+        @include transition(all .5s ease); 
+    }
+    .triangle-21 { 
+        border-bottom-color:lavender; @include opacity(1); 
+    }
+}
+
+
+.icosahedron { 
+    // -------------------------------- /
+    // this loop does all the job       /
+    // -------------------------------- /
+    
+    @for $i from 1 through $triangleLength {
+        // top part
+        @if $i <= 5 {
+            .triangle-#{$i} { 
+                @include transform( rotateY(-(#{$angle*$i}deg)) rotateX(-45deg) translateZ(-$triangleSize/2+(0)) ); 
+                top:-$triangleSize/2;
+            }
+            &:hover .triangle-#{$i} { top:-$triangleSize; }
+        }
+        // bottom part (top part inverted)
+        @else if $i <= 10 {
+            .triangle-#{$i} { 
+                @include transform( rotateY(-(#{$angle*$i}deg)) rotateX(-45deg) translateZ($triangleSize/2+(0)) ); 
+                top:$triangleSize/2; 
+                border-bottom:none; 
+                border-top:$triangleSize solid $triangleColor; 
+            }
+            &:hover .triangle-#{$i} { top:$triangleSize; }
+        }
+        // first ring
+        @else if $i <= 15 {
+            .triangle-#{$i} { 
+                @include transform( rotateY(-(#{$angle*$i}deg)) translateZ(-155px) rotateX(-9deg) ); 
+                top:0; 
+                border-bottom:none; 
+                border-top:$triangleSize solid $triangleColor; 
+            }
+            &:hover .triangle-#{$i} { @include transform( rotateY(-(#{$angle*$i}deg)) translateZ(-230px) rotateX(-9deg) ) }
+        }
+        // second ring (first ring inverted)
+        @else if $i <= 20 {
+            .triangle-#{$i} { 
+                @include transform( rotateY(-(#{$angle*$i+252}deg)) translateZ(-155px) rotateX(9deg) );
+                top:0; 
+            }
+            &:hover .triangle-#{$i} { @include transform( rotateY(-(#{$angle*$i+252}deg)) translateZ(-230px) rotateX(9deg) ); }
+        }
+    }
+}
+
+
+body > {
+    h1 { font-family:Arial; font-size:18px; 
+        position:absolute; top:20px; left:50px; 
+        font-weight:normal; }
+    span { font-size:14px; font-family:Arial; 
+        position:absolute; top:60px; left:50px; 
+        background-color:hotpink; 
+        border-radius:3px; padding:6px 10px; color:white;   
+        text-shadow:0 1px 0 darken(hotpink,20%); 
+  }
+}

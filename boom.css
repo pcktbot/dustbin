@@ -1,0 +1,31 @@
+@keyframes boom {
+    0% { transform: scale(1);}
+    25% { transform: scale(10);}
+    50% { transform: scale(40);}
+    75% { transform: scale(120);}
+    100% { transform: scale(240);}
+}
+body: {
+}
+.detonate {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: 35%;
+    left: 35%;
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    animation: boom 3s linear infinite;
+    z-index: 0;
+}
+.horizon {
+    width: 300%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -20px;
+    left: 0;
+    background-color: black;
+    z-index: 1;
+}

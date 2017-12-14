@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+.stage {
+    perspective: 1000px;
+    perspective-origin: center center;
+    margin: 0 auto;
+    position: relative;
+    transform: perspective(1000px);
+
+}
+figure {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: .5;
+    text-align: center;
+    color: cadetblue;
+    font-size: 7rem;
+    font-family: sans-serif;
+    transform: rotateY(25deg);
+}
+.shape {
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    position: absolute;
+}
+.spin {
+    transform-style: preserve-3d;
+}
+.one {transform: translateY(2px) rotateY(25deg);}
+.two {transform: translateY(4px) rotateY(25deg);}
+.three {transform: translateY(6px) rotateY(25deg);}
+.four {transform: translateY(8px) rotateY(25deg);}
+.five {}
+.six {}
+.seven {}
+.eight {}
+
+@keyframes spin {
+  0% {transform: rotateY(0deg);}
+  100% {transform: rotateY(360deg);}
+}

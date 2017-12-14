@@ -1,0 +1,42 @@
+*{
+	   -webkit-backface-visibility: hidden;
+}
+ul,li{
+   	margin: 0 auto;
+   	padding: 0;
+}
+.cont{
+	   height: 220px;
+	   width: 220px;
+	 	border-radius: 100%;
+	   border: 3px dashed #000;
+	 	position: absolute;
+	 	-webkit-animation: spinner 5s ease-in-out infinite;
+	 	left: 0;
+  &:hover{
+     -webkit-animation-play-state: paused; 
+  }
+	.spokes {
+	 	height: 200px;
+	 	width: 200px;
+	 	border: 10px solid #000;
+	 	border-radius: 100%;
+	 	position: absolute;
+	 	left: 0;
+	 }
+	  li{
+	    list-style: none;
+	    border-right: 1px solid #666;
+	    height: 202px;
+	    width: 1px;
+	    position: absolute;
+	    left: 100px;
+	  }
+}
+@-webkit-keyframes spinner{
+
+	50%{
+		-webkit-transform: rotate(360deg);
+		left: calc(100% - 220px);
+	}
+}

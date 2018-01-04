@@ -1,0 +1,29 @@
+html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+} 
+body {
+    background-color: rgba(123, 83, 83, 1);
+    background-image: 
+        radial-gradient(closest-side, 
+            transparent 98%, 
+            rgb(190, 178, 147)
+        ),
+        radial-gradient(closest-side, 
+            transparent 98%, 
+            rgb(173, 176, 209) 99%
+        );
+    background-size: 80px 80px;
+    background-position:0 0, 40px 40px;
+}
+.content {
+    width: 60vw;
+    height: 5rem;
+    margin: 10% auto;
+    background-color: #fff;
+    border: 2px solid #333;
+}
+h2 {
+    text-align: center;
+}

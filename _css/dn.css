@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+body {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    font-family: 'PT Mono', monospace;
+}
+/* STRUCTURE */
+div {}
+section {
+    margin: 0 auto;
+}
+header {
+    min-height: 80px;
+    height: 15vh; 
+    width: 100%;
+    top: 0; left: 0;
+    position: fixed;
+    z-index: 2;
+    box-sizing: border-box;
+}
+header span {
+    text-align: center;
+}
+header span * {
+    display: inline-block;
+    margin: 0 auto;
+}
+footer {
+    height: 15vh; width: 100%;
+}
+.wrapper {
+}
+.wrapper > * {
+    border: 3px solid cadetblue;
+}
+.main {
+    max-width: 800px;
+    background-color: white;
+    margin: 15vh auto 0; /* to Keep below header */
+}
+.btn {
+    padding: 1.2em 2.2em;
+    border: 1px solid #f6f6f6;
+    line-height: calc(15vh / 3);
+}
+.btn:hover {
+    border: none;
+    box-shadow: 0 27px 55px rgba(0, 0, 0, 0.3), 0 17px 17px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0);
+}
+
+/* TYPE and CONTENT */
+
+
+#skill { 
+	list-style: none;
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	padding: 1em 0;
+}
+
+#skill li { 
+	margin-bottom:50px; 
+	background:#e9e5e2;
+	background-image: linear-gradient(top, #e1ddd9, #e9e5e2);  
+	height:20px; 
+	border-radius:4px;  
+	box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	  
+}
+
+#skill li h3 { 
+	position: relative; 
+	top:-25px;
+}
+
+.bar { 
+	height:18px; 
+	margin:1px 2px;  
+	position:absolute;
+	border-radius:4px;
+	box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+    background-color: cadetblue;
+	background-image: linear-gradient(top, cadetblue, #e06995);
+}
+
+.graphic-design {
+	width:100%; 
+	animation:graphic-design 2s ease-out;
+	
+}
+
+.html-css {
+	width:90%;
+	animation:html-css 2s ease-out;
+
+}
+
+.jquery {
+	width:65%;
+	animation:jquery 2s ease-out;
+    background-color: cadetblue;
+	background-image: linear-gradient(top, cadetblue, #e06995);
+}
+
+.wordpress {
+	width:80%;
+	animation:wordpress 2s ease-out;
+	background-color: cadetblue;
+	background-image: linear-gradient(top, cadetblue, #e06995);
+}
+
+@keyframes graphic-design       { 0%  { width:0px;} 100%{ width:100%;}  }
+@keyframes html-css        { 0%  { width:0px;} 100%{ width:90%;}  }
+@keyframes jquery      { 0%  { width:0px;} 100%{ width:65%;}  }
+@keyframes wordpress   { 0%  { width:0px;} 100%{ width:80%;}  }

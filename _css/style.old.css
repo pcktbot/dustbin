@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=GFS+Neohellenic|Open+Sans:300|Rokkitt');
+span.greek {
+    font-family: 'GFS Neohellenic', sans-serif;
+}
+@-webkit-keyframes a {
+    0% {
+        -webkit-transform: translate3d(-5%,0,0)
+    }
+    to {
+        -webkit-transform: translate3d(5%,0,0)
+    }
+}
+@keyframes a {
+    0% {
+        transform: translate3d(-5%,0,0)
+    }
+    to {
+        transform: translate3d(5%,0,0)
+    }
+}
+@-webkit-keyframes b {
+    0% {
+        -webkit-transform: translate3d(0,10%,0)
+    }
+    to {
+        -webkit-transform: translate3d(0,-10%,0)
+    }
+}
+@keyframes b {
+    0% {
+        transform: translate3d(0,10%,0)
+    }
+    to {
+        transform: translate3d(0,-10%,0)
+    }
+}
+html, body {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', serif;
+    letter-spacing: -.02em;
+    color: #36351d;
+    background-color: rgba(245, 240, 226, .2);
+    text-rendering: optimizeLegibility;
+}
+body:before {
+    top: 15vh;
+    right: 35vh;
+    width: 140vh;
+    height: 140vh;
+    -webkit-transform: translate3d(-5%,0,0);
+            transform: translate3d(-5%,0,0);
+    -webkit-animation: a 20s cubic-bezier(.455,.03,.515,.955) infinite alternate;
+            animation: a 20s cubic-bezier(.455,.03,.515,.955) infinite alternate;
+    background-color: rgba(58, 63, 65, 1.00);
+    opacity: .5;
+}
+body:after {
+    top: -35vh;
+    right: -10vw;
+    width: 65vw;
+    height: 65vw;
+    background-color: rgba(54, 60, 69, 1.00);
+    opacity: .8;
+    -webkit-transform: translate3d(0,-10%,0);
+            transform: translate3d(0,-10%,0);
+    -webkit-animation: b 15s 2s cubic-bezier(.455,0.3,.515,.955) infinite alternate;
+            animation: b 15s 2s cubic-bezier(.455,0.3,.515,.955) infinite alternate;
+}
+body:before, body:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    display: block;
+    border-radius: 50%;    
+}
+h1, h2, h3, h4 {
+    font-family: 'Rokkitt', sans-serif;
+}
+h1 {
+    letter-spacing: .05em;
+}
+span {
+    font-family: monospace;
+    line-height: 2em;
+    font-weight: 100;
+    padding: 5px 15px;
+    background-color: #f5f0e2;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(54, 53, 29, .8); 
+    
+}
+#content {
+    max-width: 800px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 2.5em;
+    z-index: 1;
+}
+#content h2 {
+    padding-top: 1em;
+}
+#whoami {
+    vertical-align: middle;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 10px solid rgba(115, 127, 147, .3);
+    box-sizing: content-box;
+    z-index: 2;
+    font-size: .7em;
+    width: 100%;
+    padding: 1em 0;
+    position: fixed;
+    text-rendering: geometricPrecision;
+}
+#whoami h1, #whoami p, #whoami img {
+    display: inline;
+    vertical-align: middle;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+#whoami img.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: .5px solid #a3a095;
+        
+}
+section {
+    padding: 0 10%;
+}
+article {
+    padding: 0 5%;
+    display: block;
+}
+article p {
+    padding: 0 2%;
+}
+article div {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+.left {
+    width: 40%;
+    float: left;
+    margin-bottom: 5%;
+    z-index: 2;
+}
+.right {
+    width: 40%;
+    float: right;
+    margin-bottom: 5%;
+    z-index: 2;
+
+}
+ul {list-style: none;}
+li {text-transform: uppercase; letter-spacing: 1vw; font-family: sans-serif; display: inline; }
+li a {color: #ffffff; text-shadow: -2px 2px 1px #333; text-decoration: none; padding: 5px 10px;}
+li a:hover {
+    color: #d4d;
+    transition-duration: .25s;
+}
+.bar {
+    height: 25px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #f5f0e2;
+    border: .5px solid #a3a095;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px rgba(54, 53, 29, .8);
+}
+article div.fill {
+    background-color: #a3a095;
+    border-radius: 3px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 1px 0 1px RGBA(58, 63, 65, .8)
+}
+div.aside img {
+    width: 50px;
+    height: 50px;
+    border-bottom: 5px solid #a3a095;
+    border-top: 5px solid #a3a095;
+    box-sizing: content-box;
+    padding: 5px 0; 
+}
+footer {
+    background-color: #a3a095;
+    height: 100px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+}

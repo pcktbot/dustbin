@@ -1,0 +1,108 @@
+@-webkit-keyframes wipe {
+    0% {-webkit-transform: translate3d(-5vw,-15vh,10vh);}
+    100% {-webkit-transform: translate3d(15vw,-15vh,0);}
+}
+@keyframes wipe {
+    0% {transform: translate3d(-5vw,-15vh,10vh);}
+    100% {transform: translate3d(15vw,-15vh,0);}
+}
+@-webkit-keyframes sway {
+    0% {-webkit-transform: translate3d(-30vw,5vh,0);}
+    100% {-webkit-transform: translate3d(40vw,-5vh,0);}
+}
+@keyframes sway {
+    0% {transform: translate3d(-30vw,5vh,0);}
+    100% {transform: translate3d(40vw,-5vh,0);}
+}
+html {
+    background-color: rgba(10, 20, 30, 1);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+} 
+body {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.stage {
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 1200px;
+            perspective: 1200px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+    display: inline-block;
+    margin: 0;
+}
+.moon {
+    display: block;
+    background: black;
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    margin: 0;
+    bottom: 50vh;
+    left: 0;
+    border-radius: 50%; 
+    background: radial-gradient(
+        circle at 50% 120%,
+        #ed81f6, 
+        #d091e6 10%, 
+        #780594 70%, 
+        #2a0645 95%
+    );
+    animation: wipe 10s infinite ease-in-out alternate;
+}
+.moon:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 50% 0px, 
+        rgba(159, 71, 44, 0.8), 
+        rgba(255, 255, 255, 0) 58%
+    );
+    filter: blur(5px);
+    z-index: 2;
+}
+.planet {
+    width: 170vh;
+    height: 170vh;
+    border-radius: 50%;
+    position: relative;
+    background: red;
+    top: -90vh;
+    left: 0;
+    background: radial-gradient(
+        circle at 50% 120%, 
+        #ffdfdf, 
+        #d95e5e 10%, 
+        #5c0a0a 80%, 
+        #430a07 100%
+    );
+    z-index: -5;
+    animation: sway 30s ease-in-out infinite alternate;
+}
+.planet:before {
+    content:'';
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    transform: rotate(180deg);
+    width: 60%;
+    height: 90%;
+    z-index: -4;
+    filter: blur(5px);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 70% 10%, 
+        rgba(93, 44, 105, 0.25), 
+        rgba(255, 255, 255, 0) 70%
+    );
+    animation: wipe 10s infinite ease-in alternate;
+}
+

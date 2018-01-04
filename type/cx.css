@@ -2,20 +2,18 @@ body {
     margin: 0;
 }
 .stage {
-    perspective: 1000px;
-    perspective-origin: center center;
+    perspective: 200px;
+    perspective-origin: left middle;
     margin: 0 auto;
     position: relative;
-    transform: perspective(1000px);
-
 }
 figure {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    opacity: .5;
+    width: 100px;
+    height: 100px;
+    opacity: .95;
     text-align: center;
-    color: cadetblue;
+    color: hotpink;
     font-size: 7rem;
     font-family: sans-serif;
     transform: rotateY(25deg);

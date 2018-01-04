@@ -3,9 +3,18 @@
         <meta>
         <link href="img/en.png" type="image/png" rel="icon">
         <link href="surface.css" rel="stylesheet">
-        <title></title>
+        <title>Trianglify</title>
     </head>
     <body>
-       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+        <script>
+            var pattern = Trianglify({
+                width: window.innerWidth,
+                height: window.innerHeight,
+                cell_size: 40
+            });
+            document.body.appendChild(pattern.canvas())
+        </script> 
+        <script src="surface.js"></script>
     </body>
 </html>

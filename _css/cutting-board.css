@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  line-height: 1.2;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+      -ms-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {}
+.box-block {
+  width: 200px;
+  height: 200px;
+}
+.-striped-bgs-five {
+  background: rgba(63, 81, 181,.9);
+  background-image: linear-gradient(rgb(181, 176, 63) 2px, transparent 0),
+                    linear-gradient(90deg, rgba(181, 176, 63, 0.5) 2px, transparent 0),
+                    linear-gradient(rgba(181, 176, 63, 0.3) 1px, transparent 0),
+                    linear-gradient(90deg, rgba(181, 176, 63, 0.3) 1px, transparent 0);
+  background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}

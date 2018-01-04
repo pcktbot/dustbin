@@ -1,0 +1,63 @@
+<style>$white: #fafafa;
+
+body {
+  background: $white;
+  color: rgba(0,0,0,0.84);
+  font-size: 20px;
+  line-height: 1.5;
+  padding-top: 1em;
+}
+h2 {
+  font-family: Raleway;
+  font-weight: 900;
+}
+p {
+  font-family: 'Special Elite';
+}
+
+.blurred span {
+  filter: blur(6px);
+  /* As pointed out by Alexander Erlandsson (@alexerlandsson), for situations that require better cross-browser support, the blur effect is easily reproduced with transpartent text + text-shadow
+  color: transparent;
+  text-shadow: 0 0 12px rgba(0,0,0,0.8); */
+}
+
+.invisible-ink span {
+  background: $white;
+  color: $white;
+  /* Vincent Charpentier (@VincentCharpentier) also pointed out a simple rule for true invisibility
+  color: rgba(0,0,0,0);*/
+}
+
+.redacted span {
+  position: relative;
+  white-space: pre;
+  &:after {
+    background: black;
+    border-radius: 0.1em;
+    box-shadow: 0 0 1px rgba(0,0,0,0.35);
+    content: " ";
+    width: 100%;
+    height: 1.2em;
+    left: 0;
+    position: absolute;
+    transform: skewY(-5deg) rotate(5deg);
+  }
+} </style>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Blurred</h2>
+      <p class="blurred">The home of <span>these birds</span> was on the shore of <span>the lake Stymphalis</span>, in <span>Arcadia</span> (after which they were called), where they <span>caused great destruction</span> among men and cattle.</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Invisible Ink</h2>
+      <p class="invisible-ink">The home of <span>these birds</span> was on the shore of <span>the lake Stymphalis</span>, in <span>Arcadia</span> (after which they were called), where they <span>caused great destruction</span> among men and cattle.</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Redacted</h2>
+      <p class="redacted">The home of <span>these birds</span> was on the shore of <span>the lake Stymphalis</span>, in <span>Arcadia</span> (after which they were called), where they <span>caused great destruction</span> among men and cattle.</p>
+    </div>
+  </div>
+</div>

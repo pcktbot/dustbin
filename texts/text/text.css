@@ -1,0 +1,91 @@
+@keyframes a {
+    0% {transform: translate3d(-50%,5%,0)}
+    to {transform: translate3d(15%,-10%,0)}
+}
+@keyframes b {
+    0% {transform: translate3d(5%,-5%,0)}
+    to {transform: translate3d(15%,5%,0)}
+}
+html {
+    background-color: rgba(32, 178, 83, 0.85); 
+} 
+html,body {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    background-color: black;
+background-image: 
+    radial-gradient(closest-side, 
+        transparent 98%, 
+        rgba(32, 178, 83,1)
+    ),
+    radial-gradient(closest-side, 
+        transparent 98%, 
+        rgba(255, 45, 239,1) 99%);
+background-size: 8vh 8vw;
+background-position:0 0, 4vh 4vw;
+}
+
+h1 {
+    top: 5vh;
+    z-index: 1;
+    color: blue;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate3d(5vh,-1.5vw,0);
+    white-space: nowrap;
+    font-size: 15vh;
+    text-shadow: -.5vw 0 .025vw white, .5vw 0 .025vw rgb(0, 0, 0), 0 -1vh .25vh rgba(255, 45, 239, 0.81), 0 1vh .25vh rgba(16, 48, 165, 1);
+    font-family: verdana;
+    line-height: 15.5vh;
+}
+h1:hover {
+    color: white;
+    -webkit-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+    text-shadow: -.5vw 0 .025vw blue, .5vw 0 .025vw rgb(0, 0, 0), 0 -1vh .25vh rgba(255, 45, 239, 0.81), 0 1vh .25vh rgba(16, 48, 165, 1);
+}
+span {
+    font-family: monospace;
+    position: absolute;
+    letter-spacing: .2vh;
+}
+span:first-of-type {
+    animation: a 80s 10s infinite alternate;
+    color: white;
+    text-shadow: -.5vw 0 .025vw blue, .5vw 0 .025vw rgb(0, 0, 0), 0 -1vh .25vh rgba(255, 45, 239, 0.81), 0 1vh .25vh rgba(16, 48, 165, 1);
+}
+span:hover {
+    animation: b 10s .25s infinite alternate;
+    cursor: none;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    background-color: rgba(16, 48, 165, 0.37);
+    z-index: 2;
+}
+ul, li {
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color:aqua;
+    outline: 0;
+    opacity: .5;
+    z-index: 2;
+    white-space: nowrap;
+    font-family: 'helvetica',sans-serif;
+}
+a:hover {
+    color: darkgrey;
+    opacity: 1;
+    transition: .5s ease-in-out;
+}

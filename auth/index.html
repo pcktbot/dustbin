@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G5 Auth</title>
+  <link href="auth.css" media="all" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img alt="G5 logo" src="g5.png" /> Auth
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div id="flash-messages">
+  <div class="alert alert-dismissable alert-warning">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    You need to sign in or sign up before continuing.
+  </div>
+</div>
+
+     <div class='row'>
+  <section class='col-sm-5'>
+    <h1>Sign in</h1>
+    <form accept-charset="UTF-8" action="/users/sign_in" class="well" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="" /><input name="authenticity_token" type="hidden" value="cBJadYUtkptMXxh6N/hKFlz0qrR8KRTIwcN8DLmTtQE=" /></div>
+      <div class='form-group'>
+        <label class="sr-only" for="user_email">Email</label>
+        <div class='col-sm-9'>
+          <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" placeholder="Email" type="email" value="" />
+        </div>
+      </div>
+      <div class='form-group'>
+        <label class="sr-only" for="user_password">Password</label>
+        <div class='col-sm-9'>
+          <input class="form-control col-sm-9" id="user_password" name="user[password]" placeholder="Password" type="password" />
+        </div>
+      </div>
+        <div class='checkbox'>
+          <label for="user_remember_me">
+            <input name="user[remember_me]" type="hidden" value="0" />
+            <input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /> Remember me</label>
+        </div>
+      <button class="btn btn-primary" name="button" type="submit">Sign In</button>
+      <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    More... <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+
+
+      <li><a href="/users/password/new">Forgot password?</a>
+
+      <li><a href="/users/confirmation/new">Didn&#39;t receive confirmation instructions?</a><li>
+
+
+  </ul>
+</div>
+
+      </div>
+</form>  </section>
+</div>
+
+  </div>
+</body>
+</html>

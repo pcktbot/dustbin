@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  background-color: black;
+}
+canvas {
+  width: 100%; height: 100%;
+}
+div.subscribe-container {
+  color: #fafafa; /* just text color */
+  margin: 10px;
+}
+form.subscribe {
+  width: 482px;
+  height: 50px;
+  border: 1px solid #4200FF;
+  margin: 0 auto;
+}
+input.subscribe-input, button.btn-subscribe {
+  background-color: transparent;
+  border: none;
+  color: #fafafa;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  height: 48px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  vertical-align: top;
+/* then some inherited values */
+  margin: 0;
+}
+input.subscribe-input {
+  padding: 14px;
+  width: 70%;
+}
+button.btn-subscribe {
+  padding: 14px 0;
+  width: 29%;
+  border: 0 0 0 1px;
+  border-color: #4200FF;
+  text-transform: uppercase;
+  color: #4200FF;
+  transition: all .5s ease;
+}
+button.btn-subscribe:hover {
+  background-color: #4200FF;
+  color: #fafafa;
+}

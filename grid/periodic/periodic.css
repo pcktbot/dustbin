@@ -1,0 +1,181 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  background: RGBA(236, 237, 233, 1.00);
+}
+.periods {
+  display: grid;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 100;
+  grid-template: repeat(9, 1fr) / repeat(18, minmax(calc(98vw / 18), 1fr));
+  width: 98vw;
+  min-height: 700px;
+  height: 98vh;
+  margin: 1vh auto auto;
+  /*border: 1px solid #C4005A;*/
+  overflow: hidden;
+  color: #111;
+}
+/* collapsed 18 periods */
+.element {
+  border: 2px solid #006BA6;
+  box-shadow: 2px 2px 0 rgba(193, 194, 196, 1.00);
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: all .2s ease;
+}
+.element:hover {
+  transform: scale(1.4);
+  transform-origin: center center;
+  box-shadow: -1px 1px 5px 0 RGBA(231, 232, 226, .3),
+  0 0 50px 0 RGBA(16, 16, 16, .8),
+  -2px -2px 30px 0 RGBA(16, 16, 16, .6),
+  2px 2px 30px 0 RGBA(231, 232, 226, .3);
+}
+.top:hover {
+  transform-origin: top center;
+}
+.bottom:hover {
+  transform-origin: bottom center;
+}
+.element p {
+  line-height: .8;
+  transition: all .2s ease;
+}
+.element:hover p {
+  color: #fff;
+  width: 100%;
+}
+.name {
+  font-size: .8em;
+  margin: 5px 0 0 0;
+}
+@media (max-width: 700px) {
+  .name {
+    display: none;
+  }
+  .atomic-number {
+    font-size: 1.2em !important;
+    font-weight: 700;
+    margin: 25px 0 5px;
+  }
+}
+.atomic-number {
+  font-weight: 900;
+  font-size: 2.2em;
+  margin: 10px 0;
+}
+.symbol {
+  font-weight: 700;
+  font-weight: 1.2em;
+  margin: 0 0 5px 0;
+}
+.element:nth-of-type(1):hover {
+  transform-origin: top left;
+}
+.element:nth-of-type(3):hover, .alkali-metal:hover {
+  transform-origin: center left;
+}
+.element:nth-of-type(2) {
+  grid-column: 18 / 19;
+}
+.element:nth-of-type(2):hover {
+  transform-origin: top right;
+}
+.element:nth-of-type(5),
+.element:nth-of-type(13) {
+  grid-column: 13 / 14;
+}
+.element:nth-of-type(56):hover {
+  box-shadow: 0 0 50px 0 RGBA(16, 16, 16, .8);
+}
+.element:nth-of-type(91),
+.element:nth-of-type(105) {
+  grid-column: 4 / 5;
+}
+.element:nth-of-type(90):hover {
+  transform-origin: center right;
+}
+.noble-gas {
+  background-color: RGBA(255, 218, 0, .6);
+}
+.noble-gas:hover {
+  background-color: RGBA(255, 218, 0, .8);
+  color: #000 !important;
+  transform-origin: bottom right;
+}
+.transitional-metal {
+  background-color: RGBA(193, 194, 196, .6);
+}
+.transitional-metal:hover {
+  background-color: RGBA(193, 194, 196, .8);
+}
+.alkali-metal {
+  background-color: RGBA(196, 0, 90, .5);
+}
+.alkali-metal:hover {
+  background-color: RGBA(196, 0, 90, .8);
+}
+.alkaline-earth {
+  background-color: RGBA(66, 0, 255, .5);
+}
+.alkaline-earth:hover {
+  background-color: RGBA(66, 0, 255, .8);
+}
+.actinide {
+  background-color: RGBA(206, 13, 34, .3);
+}
+.actinide:hover {
+  background-color: RGBA(206, 13, 34, .8);
+}
+.polytomic-nonmetal {
+  background-color: RGBA(27, 117, 188, .3);
+}
+.polytomic-nonmetal:hover {
+  background-color: RGBA(27, 117, 188, .8);
+}
+.diatomic-nonmetal {
+background-color: RGBA(255, 0, 0, .5);
+}
+.diatomic-nonmetal:hover {
+background-color: RGBA(255, 0, 0, .8);
+}
+.lan­thanide {
+background-color: RGBA(0, 187, 100, .3);
+}
+.lan­thanide:hover {
+background-color: RGBA(0, 187, 100, .8);
+}
+.metalloid {
+background-color: RGBA(255, 104, 0, .5);
+}
+.metalloid:hover {
+background-color: RGBA(255, 104, 0, .8);
+}
+.post-transitional {
+background-color: RGBA(157, 106, 255, .5);
+}
+.post-transitional:hover {
+background-color: RGBA(157, 106, 255, .8);
+}
+.unknown:hover p {
+  color: #000 !important;
+}
+.prb-transitioal:hover {
+  background: linear-gradient(RGBA(193, 194, 196, .8) 5%, transparent 6%);
+}
+.prb-post:hover {
+  background: linear-gradient(RGBA(157, 106, 255, .8) 5%, transparent 6%);
+}
+.synthetic, .synthetic:hover {
+  border-bottom: 4px dotted #006BA6;
+  border-top: 4px dotted #006BA6;
+}
+.decay, .decay:hover {
+  border-bottom: 4px dashed #006BA6;
+  border-top: 4px dashed #006BA6;
+}
+/* expanded 32 periods */

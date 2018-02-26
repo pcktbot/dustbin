@@ -1,0 +1,39 @@
+[
+  {
+    "Role": "President",
+    "Name": "Donald Trump"
+  },
+  {
+    "Role": "Vice President",
+    "Name": "Mike Pence"
+  },
+  {
+    "Role": "State",
+    "Name": "Rex Tillerson"
+  },
+  {
+    "Role": "Treasury",
+    "Name": "Steve Mnuchin"
+  },
+  {
+    "Role": "Defense",
+    "Name": "James Mattis"
+  },
+  {
+    "Role": "Justice",
+    "Name": "Jeff Session"
+  },
+  {
+    "Role": "Interior",
+    "Name": "Ryan Zinke"
+  },
+  {
+    "Role": "Agriculture",
+    "Name": "Sonny Perdue"
+  },
+  {
+    "Role": "Commerce",
+    "Name": "Wilbur Ross"
+  }
+
+]

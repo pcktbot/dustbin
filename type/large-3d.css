@@ -1,0 +1,33 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700');
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.stage {
+    perspective: 1200px; 
+    perspective-origin: bottom left; 
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+.shape {
+    transform-style: preserve-3d; 
+    transform-origin: center center; 
+    position: absolute;
+}       
+figure {
+    position: absolute; 
+    font-size: 120vw;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    transform: rotateY(35deg);
+    top: 0;
+    margin: 0;
+    line-height: .7;
+    color: #C4005A;
+    opacity: .8;
+}

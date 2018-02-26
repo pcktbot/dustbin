@@ -1,0 +1,65 @@
+ @import url('https://fonts.googleapis.com/css?family=Heebo:900');
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 8px;
+}
+.outer {
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+.outer li {
+    position: relative;
+    padding: 7px 10px;
+    padding-left: 96px;
+    border: 3px solid #222;
+    margin: 10px 0;
+    transition: all .2s ease-out;
+    cursor: pointer;
+    min-height: 40px;
+    max-width: 90vw;
+}
+.outer li:nth-of-type(1) {
+    margin-left: 11vw;
+    width: 78vw;
+}
+.outer li:nth-of-type(2) {
+    margin-left: 8vw;
+    width: 82vw;
+}
+.outer li:nth-of-type(3) {
+    margin-left: 12vw;
+    width: 81vw;
+}
+.outer li:hover {
+    transform: rotate(-.5deg);
+    background-color: #d8192b;
+    color: #fff;
+}
+.outer li:hover .bottom {
+    color: #222;
+}
+.count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 74px;
+    border-right: 3px solid #222;
+    line-height: 80px;
+    font-size: 68px;
+    text-align: center;    
+}
+.bottom {
+    color: #d8192b;
+}

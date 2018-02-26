@@ -1,0 +1,61 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+}
+.grid {
+  width: 98vw;
+  height: 50vh;
+  margin: 1vh auto;
+  border: 1px solid RGBA(114, 151, 172, 1.00);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 .5vw;
+}
+.box, .head {
+  position: relative;
+  color: RGBA(231, 235, 236, 1.00);
+}
+.box {
+  font-family: "terfens", sans-serif;
+  border-left: 1px solid RGBA(241, 40, 41, 1.00);
+  border-right: 1px solid RGBA(241, 40, 41, 1.00);
+}
+.head {
+  font-family: "Heebo", sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+.first {
+  border-top: 1px solid RGBA(241, 40, 41, 1.00);
+}
+.chevron {
+
+}
+.nest::after, .nest::before {
+  border-top: 2px solid RGBA(241, 40, 41, 1.00);
+}
+.foot {
+  border-bottom: 1px solid RGBA(241, 40, 41, 1.00);
+}
+.chevron::after, .chevron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: calc(50vh / 5);
+  width: calc(98vw / 8 - .3vw);
+  border-bottom: 2px solid RGBA(241, 40, 41, 1.00);
+  z-index: 1;
+}
+.box::before {
+  transform: skew(0deg, 10deg);
+  left: 0;
+}
+.box::after {
+  transform: skew(0deg, -10deg);
+  right: 0;
+}
+.head {
+  background-color: RGBA(10, 32, 66, 1.00);
+}

@@ -1,0 +1,33 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.container {
+    background-color: #C1C2C4;
+    max-width: 550px;
+    width: 85vw;
+    height: 100vh;
+    border-radius: 10px;
+
+}
+h1 {
+    position: fixed;
+    line-height: 0;
+    top: 0;
+
+    font-size: 100vh;
+    opacity: .8;
+}
+.two {
+    color: #C4005A;
+}
+.five {
+    color: #006BA6;
+}

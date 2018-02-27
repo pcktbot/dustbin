@@ -12,6 +12,7 @@ html, body {
 }
 .wrap * {
   border: 1px solid RGBA(0, 107, 166, .5);
+  position: relative;
 }
 .grid {
   display: grid;
@@ -25,6 +26,7 @@ html, body {
   display: flex;
   flex-wrap: nowrap;
   line-height: .7;
+  z-index: 1;
 }
 .header * {
   flex: auto;
@@ -46,6 +48,7 @@ html, body {
   grid-column: 1 / 7;
   /* following defines a subgrid */
   display: grid;
+  border: none;
   grid-template-columns: 7fr 4fr 4fr 2fr 1fr 1fr;
   grid-template-rows: 2fr repeat(8, 1fr) 2fr;
 }
@@ -53,6 +56,9 @@ html, body {
   color: RGBA(182, 182, 179, 1.00);
   grid-row: 1 / 11;
   background-color: RGBA(255, 104, 0, .5);
+  box-shadow: 0 -5vw 0 RGBA(0, 107, 166, .3),
+  0 5vw 0 RGBA(0, 107, 166, .3);
+  border: none;
 }
 .shape:nth-child(1) {
   grid-row: 1 / 8;
@@ -73,10 +79,12 @@ html, body {
 .shape:nth-child(5) {
   grid-row: 4 / 8;
   grid-column: 5 / 6;
+
 }
 .shape:nth-child(6) {
   grid-row: 2 / 7;
   grid-column: 6 / 7;
+
 }
 .footer {
   grid-column: 1 / 7;
@@ -84,6 +92,7 @@ html, body {
   display: grid;
   grid-template-columns: 2fr 1fr 6fr;
   grid-gap: 4px;
+  z-index: 1;
 }
 .footer-shape {
 

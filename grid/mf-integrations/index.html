@@ -2,36 +2,88 @@
 <html>
 <head>
 <title></title>
-<!--Swiss Grid Typekit-->
-<link rel="stylesheet" href="https://use.typekit.net/kih8oxa.css">
-<link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Heebo:300,900" rel="stylesheet">
 <link rel="stylesheet" href="mf-integrations.css">
 </head>
 <body>
+    <h1>Multifamily Integrations</h1>
+    <div id="connectors">
+        <svg id="svg1" width="0" height="0" >
+            <path id="path1"/>
+            <path id="path2"/>
+            <path id="path3"/>
+            <path id="path4"/>
+            <!-- https://codepen.io/alojzije/pen/ndfrI -->
+        </svg>
+    </div>
 <div class="grid">
-  <div class="head"></div>
+  <div class="head">Software Type</div>
   <div class="head">Yardi</div>
   <div class="head">RealPage</div>
   <div class="head">Other</div>
 
-  <div class="box first"></div>
-  <div class="box first"></div>
-  <div class="box first"></div>
-  <div class="box first"></div>
+  <div class="box">RMS (Revenue Management)</div>
+  <div class="box not-integrated">RentMaximizer</div>
+  <div class="box" onclick="yieldstar()">
+      <span id="yieldstar">YieldStar</span>
+      <span class="pa tooltip" data-tooltip="Pricing & Availability">PA</span>
+  </div>
+  <div class="box">
+      <span id="lro">LRO</span>
+      <span class="pa tooltip" data-tooltip="Pricing & Availability">PA</span>
+  </div>
 
-  <div class="box chevron nest"></div>
-  <div class="box chevron nest"></div>
-  <div class="box chevron nest"></div>
-  <div class="box chevron nest"></div>
+  <div class="box">PMS (Property Management)</div>
+  <div class="box">
+      <span id="voyager">Voyager</span>
+      <span class="pa tooltip" data-tooltip="Pricing & Availability">PA</span>
+      <span class="il tooltip" data-tooltip="Integrated Leads">IL</span>
+      <span class="oll tooltip" data-tooltip="Online Leasing">OLL</span>
+  </div>
+  <div class="box">
+      <span id="onesite">OneSite</span>
+      <span class="pa tooltip" data-tooltip="Pricing & Availability">PA</span>
+      <span class="il tooltip" data-tooltip="Integrated Leads">IL</span>
+      <span class="oll tooltip" data-tooltip="Online Leasing">OLL</span>
+  </div>
+  <div class="box"></div>
 
-  <div class="box chevron"></div>
-  <div class="box chevron"></div>
-  <div class="box chevron"></div>
-  <div class="box chevron"></div>
+  <div class="box">CMS (Customer Management)</div>
+  <div class="box" onclick="yardi()">
+      <span id="rentcafe">RentCafe</span>
+      <span class="pa tooltip" data-tooltip="Pricing & Availability">PA</span>
+      <span class="il tooltip" data-tooltip="Integrated Leads">IL</span>
+      <span class="oll tooltip" data-tooltip="Online Leasing">OLL</span>
+      <span class="residents tooltip" data-tooltip="Residents Portal">RES</span>
+  </div>
+  <div class="box"></div>
+  <div class="box">
+      <span id="salesforce">SalesForce</span>
+  </div>
 
-  <div class="box foot"></div>
-  <div class="box foot"></div>
-  <div class="box foot"></div>
-  <div class="box foot"></div>
+  <div class="box foot">
+      <span>LMS (Lead Management)</span>
+  </div>
+  <div class="box foot">
+      <span id="popcard">PopCard</span>
+      <span class="mail">@myLTSMail.com</span>
+      <span class="il tooltip" data-tooltip="Integrated Leads">IL</span>
+  </div>
+  <div class="box foot">
+      <span id="lead2lease">Lead2Lease</span>
+      <span class="mail">@lead2lease.com</span>
+  </div>
+  <div class="box foot">
+      <ul>
+          <li>LeaseHawk <span class="mail">@propmsg.com</span></li>
+          <li>AnyOne Home <span class="mail">@incontactemail.com</span></li>
+          <li>iLoveLeasing (Spherexx) <span class="mail">@iloveleasing.com</span></li>
+      </ul>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="mf-arrows.js" type="text/javascript"></script>
 </body>
 </html>

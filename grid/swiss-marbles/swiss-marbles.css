@@ -17,28 +17,30 @@ html, body {
   display: grid;
   width: 100vw; height: 100vh;
   margin: 0;
+  justify-content: center;
+  align-content: center;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 12fr 2fr;
+
 }
 .content {
   grid-column: 1 / 7;
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  grid-template-rows: 5fr 10fr 20fr 35fr 50fr 75fr 90fr;
+  grid-template-columns: repeat(25, 4vmin);
+  grid-template-rows: repeat(25, 4vmin);
   /* 285 */
 }
 .marble {
   margin: 0;
-  grid-column: 1 / 26;
-  box-shadow: 0 -2px 14px RGBA(16, 16, 16, .2);
   transition: all .2s ease;
-}
-.marble:hover {
-  transform: scale(.8);
-  z-index: 1;
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 .marble:nth-of-type(1) {
-  grid-row: 1 / 2;
+  grid-row: 16 / 20;
+  grid-column: 16 / 20;
   background-color: RGBA(236, 237, 233, .95);
 }
 .marble:nth-of-type(2) {
@@ -46,7 +48,8 @@ html, body {
   background-color: RGBA(236, 237, 233, .9);
 }
 .marble:nth-of-type(3) {
-  grid-row: 3 / 4;
+  grid-row: 5 / 16;
+  grid-column: 5 / 16;
   background-color: RGBA(236, 237, 233, .8);
 }
 .marble:nth-of-type(4) {

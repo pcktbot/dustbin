@@ -16,6 +16,10 @@ html, body {
 .tile {
   position: relative;
 }
+.wide {
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+}
 .bg-effect {
   border: 6px solid #000;
   border-radius: 4px;
@@ -47,7 +51,7 @@ html, body {
   position: absolute;
 }
 .tile-content {
-  background-color: #E7EBEC;
+  background-color: #FFF;
   border: 6px solid #000;
   border-radius: 4px;
   width: 100%; height: 100%;

@@ -1,0 +1,108 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  /*border: 1px solid RGBA(255, 218, 0, .4);*/ /* canary yellow */
+}
+html, body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: RGBA(241, 40, 41, 1.00); /* cherry red */
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  border-top: 2px solid RGBA(241, 40, 41, 1.00);
+  border-bottom: 2px solid RGBA(241, 40, 41, 1.00);
+}
+form input {
+  width: 55%;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  color: RGBA(241, 40, 41, 1.00);
+  box-shadow: inset -20px 0 0 rgba(255,255,255,.5);
+}
+form button {
+  width: 45%;
+  background: RGBA(241, 40, 41, 1.00);
+  font-size: 1.2rem;
+  color: white;
+  transition: all .2s ease-out;
+  padding: 15px 0
+  outline: none;
+  border: none;
+}
+form button:hover {
+  box-shadow: -10px 10px 0 RGBA(241, 40, 41, 1.00);
+  color: RGBA(241, 40, 41, 1.00);
+  background-color: transparent;
+}
+code {
+  background-color: RGBA(247, 239, 231, 1.00);
+  color: RGBA(0,0,0,1.00);
+  padding-left: 10px;
+}
+.wrapper {
+  min-height: 100%;
+  padding: 10px;
+}
+.grid-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.grid-column:first-of-type {
+  padding-top: 15px;
+}
+.grid-column:first-of-type .callout-content {
+  text-align: right;
+}
+.grid-column:last-of-type {
+  padding-top: 30px;
+}
+.inner-content, .callout-content {
+  margin-bottom: 15px;
+  transition: all .2s ease-in;
+}
+.inner-content {
+  border: 6px solid RGBA(241, 40, 41, 1.00);
+}
+.inner-content:hover {
+  box-shadow: 10px 10px 0 RGBA(241, 40, 41, 1.00);
+}
+.callout-content {
+
+}
+.top, .second {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  border-bottom: 2px solid RGBA(241, 40, 41, 1.00);
+}
+.left {
+  width: 30%;
+  padding: 15px 10px 5px;
+  border-right: 2px solid RGBA(241, 40, 41, 1.00);
+}
+.right {
+  width: 70%;
+  padding: 15px 10px 5px;
+}
+.inner-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.inner-child span {
+  margin: 10px;
+}

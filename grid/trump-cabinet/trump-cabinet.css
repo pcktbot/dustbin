@@ -18,11 +18,13 @@ form {
   border-bottom: 2px solid RGBA(241, 40, 41, 1.00);
 }
 form input {
+  font-family: monospace;
   width: 55%;
   padding: 15px 10px;
   font-size: 1.2rem;
   color: RGBA(241, 40, 41, 1.00);
-  box-shadow: inset -20px 0 0 rgba(255,255,255,.5);
+  border: none;
+  outline: none;
 }
 form button {
   width: 45%;
@@ -40,7 +42,7 @@ form button:hover {
   background-color: transparent;
 }
 code {
-  background-color: RGBA(247, 239, 231, 1.00);
+  background-color: RGBA(255, 218, 0, .4);
   color: RGBA(0,0,0,1.00);
   padding-left: 10px;
 }

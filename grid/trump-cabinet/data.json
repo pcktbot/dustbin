@@ -1,39 +1,159 @@
 [
   {
-    "Role": "President",
-    "Name": "Donald Trump"
+    "role": "President",
+    "name": "Donald Trump"
   },
   {
-    "Role": "Vice President",
-    "Name": "Mike Pence"
+    "role": "Vice President",
+    "name": "Mike Pence"
   },
   {
-    "Role": "State",
-    "Name": "Rex Tillerson"
+    "cabinet": [
+      {
+        "role": "State",
+        "name": "Rex Tillerson"
+      },
+      {
+        "role": "Treasury",
+        "name": "Steve Mnuchin"
+      },
+      {
+        "role": "Defense",
+        "name": "James Mattis"
+      },
+      {
+        "role": "Justice",
+        "name": "Jeff Session"
+      },
+      {
+        "role": "Interior",
+        "name": "Ryan Zinke"
+      },
+      {
+        "role": "Agriculture",
+        "name": "Sonny Perdue"
+      },
+      {
+        "role": "Commerce",
+        "name": "Wilbur Ross"
+      }
+    ]
   },
   {
-    "Role": "Treasury",
-    "Name": "Steve Mnuchin"
-  },
-  {
-    "Role": "Defense",
-    "Name": "James Mattis"
-  },
-  {
-    "Role": "Justice",
-    "Name": "Jeff Session"
-  },
-  {
-    "Role": "Interior",
-    "Name": "Ryan Zinke"
-  },
-  {
-    "Role": "Agriculture",
-    "Name": "Sonny Perdue"
-  },
-  {
-    "Role": "Commerce",
-    "Name": "Wilbur Ross"
+    "former-staff": [
+      {
+        "role": ["National Security Adviser"],
+        "name": "Michael Flynn",
+        "date": "2017-02"
+      },
+      {
+        "role": [
+          "Communications Director",
+          "Press Secretary"
+        ],
+        "name": "Sean Spicer",
+        "date": "2017-07"
+      },
+      {
+        "role": ["National Economic Council Director"],
+        "name": "Gary Cohn",
+        "date": "2018-03",
+        "reason": "Tariffs, underutilized"
+      },
+      {
+        "role": ["Deputy National Economic Council Director"],
+        "name": "Jeremy Katz",
+        "date": "2017-12"
+      },
+      {
+        "role": [
+          "Communications Director",
+          "Director of Strategic Communications"
+        ],
+        "name": "Hope Hicks",
+        "date": "2018-02"
+      },
+      {
+        "role": ["Chief Strategist"],
+        "name": "Steve Bannon"
+      },
+      {
+        "role": ["White House Chief of Staff"],
+        "name": "Reince Priebus",
+        "date": "2017-07"
+      },
+      {
+        "role": ["Communications Director"],
+        "name": "Anthony Scaramucci",
+        "date": "2017-07"
+      },
+      {
+        "role": ["White House Deputy Chief of Staff"],
+        "name": "Katie Walsh",
+        "date": "2017-01"
+      },
+      {
+        "role": ["Communications Director"],
+        "name": "Michael Dubke",
+        "date": "2017-05"
+      },
+      {
+        "role": ["Deputy Assistant to the President"],
+        "name": "Sebastian Gorka",
+        "date": "2017-08"
+      },
+      {
+        "role": ["Deputy National Security Advisor"],
+        "name": "K.T. McFarland",
+        "date": "2017-04"
+      },
+      {
+        "role": ["Health and Human Services"],
+        "name": "Tom Price",
+        "date": "2017-09",
+        "reason": "Scandal over travel expenditures"
+      },
+      {
+        "role": ["Communications Director"],
+        "name": "Omarosa Manigault Newman",
+        "date": "2017-12"
+      },
+      {
+        "role": ["FBI Director"],
+        "name": "James Comey",
+        "date": "2017-05",
+        "reason": "Fired over Russia investigation"
+      },
+      {
+        "role": ["Deputy FBI Director"],
+        "name": "Andrew McCabe",
+        "date": "2018-01",
+        "reason": ""
+      },
+      {
+        "role": ["Deputy National Security Adviser"],
+        "name": "Dina Powell",
+        "date": "2018-01",
+        "reason": ""
+      },
+      {
+        "role": ["Staff Secretary"],
+        "name": "Rob Porter",
+        "date": "2018-02",
+        "reason": "Domestic violence allegations and lack of security clearance"
+      },
+      {
+        "role": [""],
+        "name": "",
+        "date": "",
+        "reason": ""
+      },
+      {
+        "role": [""],
+        "name": "",
+        "date": "",
+        "reason": ""
+      }
+    ]
   }
-
 ]

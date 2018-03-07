@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+html, body {
+  margin: 0;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 10px auto;
+}
+.hexagon, .hexagon::before, .hexagon::after {
+  transform:rotate(15deg);
+}
+.hexagon {
+  width: 30vmin;
+  height: 15vmin;
+  margin: 8.6vmin auto;
+  position: relative;
+  background-color: grey;
+}
+.hexagon::before, .hexagon::after {
+  content:'';
+  width: 0;
+  border-left: 15vmin solid transparent;
+  border-right: 15vmin solid transparent;
+  position: absolute;
+  left: 0;
+}
+
+.hexagon::before {
+  bottom: 100%;
+  border-bottom: 8.6vmin solid grey;
+}
+
+.hexagon::after {
+  top: 100%;
+  border-top: 8.6vmin solid grey;
+}

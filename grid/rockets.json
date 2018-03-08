@@ -1,0 +1,267 @@
+/* not sure how to organize the features here. what counts as a mission (or series of rocket family). If there are multiple variances, does each need its own mission. */
+[
+  {
+    "missions": [
+      {
+        "name": "Antares",
+        "family": null,
+        "active": true,
+        "manufacturer": "Orbital ATK",
+        "country of origin": "United States",
+        "variants": [
+          "110", "120", "130", "230"
+        ],
+        "flights": 7,
+        "first flight": "2013-04-21",
+        "latest flight": "2017-11-12",
+        "losses": 1,
+        "description": "can have 2 or 3 stages. and what if the variants have different specs?",
+        "stages": 2,
+        "first stage": {
+          "name": "200 Series",
+          "engines": 2,
+          "length (m)": null,
+          "diameter (m)": null,
+          "thrust (kN)(SL)": 3844,
+          "propellant mass (kg)": 242000,
+          "burn duration (s)": 215,
+          "fuel": "RP-1",
+          "oxidizer": "LOX"
+        }
+      },
+      {
+        "name": "Ariane 5",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "Atlas 5",
+        "family": "Atlas",
+        "active": true,
+        "manufacturer": "United Launch Alliance",
+        "country of origin": "United States",
+        "variants": [
+          "401", "411", "421", "431", "501", "521", "531", "541", "551"
+        ],
+        "flights": 76,
+        "first flight": "2002-08-21",
+        "latest flight": "2018-03-01",
+        "losses": 1,
+        "description": "has two solid-fuel boosters",
+        "stages": 2,
+        "first stage": {
+          "name": "Common Core Booster (CCB)",
+          "engines": 2,
+          "length (m)": 32.46,
+          "diameter (m)": 3.81,
+          "thrust (kN)(SL)": 3827,
+          "propellant mass (kg)": 284089,
+          "burn duration (s)": 842,
+          "fuel": "RP-1",
+          "oxidizer": "LOX"
+        },
+        "second stage": {
+          "name": "Centaur",
+          "engines": 1,
+          "length (m)": 12.68,
+          "diameter (m)": 3.05,
+          "propellant mass (kg)": 20830,
+          "thrust (kN)(vac)": 99,
+          "burn duration (s)": 842,
+          "fuel": "LH2",
+          "oxidizer": "LOX"
+        },
+        "boosters": "0-5",
+        "last updated": "2018-03-08"
+      },
+      {
+        "name": "Falcon 9",
+        "active": true,
+        "manufacturer": "SpaceX",
+        "country of origin": "United States",
+        "flights": 50,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 2,
+            "engines": 10,
+          }
+        ]
+      },
+      {
+        "name": "Falcon Heavy",
+        "active": true,
+        "manufacturer": "SpaceX",
+        "country of origin": "United States",
+        "flights": 1,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 2,
+            "engines": 28,
+          }
+        ]
+      },
+      {
+        "name": "Soyuz",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "Russia",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "Delta 4",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "H-2A",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "Japan",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      },
+      {
+        "name": "Titan 2",
+        "active": false,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 2,
+            "engines": 2,
+          }
+        ]
+      },
+      {
+        "name": "Saturn 5",
+        "active": false,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 3,
+            "engines": 5,
+          }
+        ]
+      },
+      {
+        "name": "",
+        "active": true,
+        "manufacturer": "",
+        "country of origin": "",
+        "flights": 0,
+        "losses": 0,
+        "features": [
+          {
+            "stages": 0,
+            "engines": 0,
+          }
+        ]
+      }
+    ],
+    "launch sites": [
+      "Cape Canaveral",
+      "Vandenberg AFB",
+
+    ],
+    "propellants": [
+      {
+        "name": "RP-1",
+        "general": "kerosene"
+      }
+    ]
+  }
+]

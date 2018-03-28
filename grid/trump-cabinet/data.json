@@ -8,10 +8,34 @@
     "name": "Mike Pence"
   },
   {
+    "white house staff": [
+      {
+        "role": "Chief of Staff",
+        "name": "John Kelly",
+        "previous": ["Secretary Homeland Security"]
+      }
+    ]
+  },
+  {
     "cabinet": [
       {
         "role": "State",
-        "name": "Rex Tillerson"
+        "name": "Mike Pompeo",
+        "previous": ["Directory CIA"]
+      },
+      {
+        "role": "National Security Adviser",
+        "name": "H.R. McMaster",
+        "next": "likely John Bolton"
+      },
+      {
+        "role": "Homeland Security",
+        "name": "Kirstjen Nielsen",
+        "previous": ["Deputy White House Chief of Staff"]
+      },
+      {
+        "role": "Director CIA",
+        "name": "Gina Haspel"
       },
       {
         "role": "Treasury",
@@ -41,6 +65,12 @@
   },
   {
     "former-staff": [
+      {
+        "role": ["Secretary of State"],
+        "name": "Rex Tillerson",
+        "date": "2018-03",
+        "reason": null
+      },
       {
         "role": ["National Security Adviser"],
         "name": "Michael Flynn",
@@ -127,7 +157,7 @@
       {
         "role": ["Deputy FBI Director"],
         "name": "Andrew McCabe",
-        "date": "2018-01",
+        "date": "2018-03",
         "reason": ""
       },
       {

@@ -1,0 +1,73 @@
+/*
+*/
+:root {
+  --background: RGBA(238, 233, 227, 1.00);
+  --color: RGBA(255, 218, 0, 1.00);
+  --color-dull: RGBA(255, 218, 0, 0.5);
+  --color-mid: RGBA(182, 182, 179, 1.00);
+  --color-light: RGBA(231, 232, 226, 1.00);
+  --color-bluish: RGBA(114, 151, 172, 0.5);
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 6vw;
+}
+html {
+  margin: 0;
+}
+body {
+  margin: 0.3rem;
+  background-color: var(--background);
+}
+
+.line {
+  font-size: 0;
+  height: 1.3rem;
+}
+.line a, .line span {
+  display: inline-block;
+  position: relative;
+}
+.space::before {
+  content: '\B7';
+}
+.comment {
+  color: var(--color);
+}
+.white-space {
+  color: var(--color-bluish);
+}
+.section .selectable:not(.active) {
+  color: var(--color-dull);
+
+}
+.section .selectable:not(.active):hover {
+  color: var(--color);
+  cursor: pointer;
+}
+.section .selectable:not(.active):hover::before,
+.section .selectable:not(.active):hover::after {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--background);
+  color: white;
+}
+.section .selectable:not(.active):hover:before {
+  content: '[';
+  transform: translateX(-100%);
+}
+.section .selectable:not(.active):hover:after {
+  content: ']';
+  left: 100%;
+}
+.section:hover .collapsible {
+  max-width: 100%;
+  opacity: 1;
+}
+.section .collapsible {
+  max-width: 0;
+  opacity: 0;
+
+}

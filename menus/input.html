@@ -1,0 +1,119 @@
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Heebo:300,900');
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  color: black;
+  font-family: 'Heebo', sans-serif;
+}
+.wrapper {
+  position: relative;
+  width: 800px;
+  max-width: 90%;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  margin: 16px auto 40px;
+  padding-bottom: 125px;
+  animation: .8s ease-out 0s 1 normal none running reveal;
+}
+.headline {
+  position: relative;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  -moz-box-pack: center;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 8px 0 0;
+  color: rgb(51,51,51);
+}
+.dotted-bottom {
+  border-bottom: 2px dotted rgb(153,153,153);
+}
+form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  max-width: 100%;
+}
+input {
+  position: relative;
+  width: auto;
+  flex: 1 1 auto;
+  height: 72px;
+  padding: 0px 84px 0px 40px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgb(68,68,68);
+  background-color: white;
+  box-shadow: rgba(50,50,50,0.1) 0px 10px 35px;
+  border-radius: 100px;
+  border-color: currentcolor currentcolor rgb(245,245,245);
+  border-style: none none solid;
+  border-width: medium medium 6px;
+  border-image: none 100% / 1 / 0 stretch;
+  animation: .5s ease-out 0s 1 normal none running reveal;
+  transition: all .5s ease-out 0s;
+}
+@@keyframes reveal {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+a {
+  text-decoration: none;
+
+}
+button {
+  border: medium none;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 32px;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1;
+  word-break: keep-all;
+  color: white;
+  background: rgba(0,0,0,0) linear-gradient(to right, rgb(66,165,245), rgb(41,121,255)) repeat scroll 0% 0%;
+  box-shadow: rgba(66,165,245,.5) 0px 5px 6px;
+  border-radius: 100px;
+  transition: all 0.4s ease-out 0s;
+  cursor: pointer;
+  overflow: hidden;
+}
+button:hover, button:focus {
+  outline: medium none currentcolor;
+  box-shadow: rgba(66,165,245, 0.5) 0px 6px 15px;
+  transform: translateY(-2px) scale(1.02,1.02);
+}
+</style>
+<div class="wrapper">
+  <div class="headline">
+    <h1>
+      A form label or <span class="dotted-bottom">headline.</span>
+    </h1>
+    </div>
+    <form>
+      <input placeholder="Your email is what we want">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </form>
+    <a href=""><button>Submit It!</button></a>
+  </div>
+</div>
+<a href="https://kutt.it/">Source</a>

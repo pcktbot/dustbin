@@ -226,41 +226,45 @@
       },
       { "name": "Ariane 5",
         "active": true,
-        "manufacturer": "",
+        "manufacturer": "Airbus Defence and Space, Arianespace, CNES",
         "variants": [
-
+          "G", "G+", "GS", "ES", "ECA"
         ],
-        "country of origin": "",
-        "flights": 76,
-        "first flight": "",
-        "latest flight": "",
-        "losses": 1,
-        "description": "",
-        "stages": 0,
+        "country of origin": "20 ESA Member States",
+        "flights": 97,
+        "first flight": "1996-06-04",
+        "latest flight": "2017-12-12",
+        "losses": 2,
+        "description": "The largest heavy launch vehicle",
+        "payload (kg)": {
+          "LEO": 20000,
+          "GTO": 11115
+        },
+        "stages": 2,
         "first stage": {
-          "name": "",
-          "engines": 0,
-          "length (m)": 0.00,
-          "diameter (m)": 0.00,
-          "thrust (kN)(SL)": 0,
-          "propellant mass (kg)": 0,
-          "burn duration (s)": 0,
-          "fuel": "",
-          "oxidizer": ""
+          "name": "EPC H173",
+          "engines": 1,
+          "length (m)": 23.8,
+          "diameter (m)": 5.4,
+          "thrust (kN)(SL)": 1390,
+          "propellant mass (kg)": 184700,
+          "burn duration (s)": 540,
+          "fuel": "LH2",
+          "oxidizer": "LOX"
         },
         "second stage": {
-          "name": "C",
+          "name": "ECA ESC-A",
           "engines": 0,
-          "length (m)": 0.00,
-          "diameter (m)": 0.00,
-          "propellant mass (kg)": 0,
-          "thrust (kN)(vac)": 0,
-          "burn duration (s)": 0,
-          "fuel": "",
-          "oxidizer": ""
+          "length (m)": 4.711,
+          "diameter (m)": 5.4,
+          "propellant mass (kg)": 19440,
+          "thrust (kN)(vac)": 67,
+          "burn duration (s)": 945,
+          "fuel": "LH2",
+          "oxidizer": "LOX"
         },
-        "boosters": 0,
-        "last updated": ""
+        "boosters": 2,
+        "last updated": "2018-03-10"
       },
       { "name": "",
         "active": true,
@@ -495,6 +499,7 @@
     "launch sites": [
       "Cape Canaveral",
       "Vandenberg AFB",
+      "Guiana Space Centre ELA-3"
 
     ],
     "propellants": [

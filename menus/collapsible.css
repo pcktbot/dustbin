@@ -22,6 +22,20 @@ body {
   background-color: var(--background);
 }
 
+
+.grad-to-dark::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 5rem;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  transition: opacity .5s;
+  right: 0;
+  bottom: -5rem;
+  background-image: linear-gradient();
+}
 .line {
   font-size: 0;
   height: 1.3rem;

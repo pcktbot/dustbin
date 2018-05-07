@@ -1,0 +1,100 @@
+ @import url('https://fonts.googleapis.com/css?family=Cookie');
+:root {
+  --bg: RGBA(34, 33, 38, 1.00);
+  --light: RGBA(247, 247, 247, 1.00);
+  --dark: RGBA(161, 170, 151, 1.00);
+}
+*,*::before,*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html,body {
+  margin: 0;
+  overflow: hidden;
+  background-color: var(--bg);
+  max-width: 100vw;
+}
+footer {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+  font-family: 'Cookie';
+  border-bottom: 3px solid white;
+  font-size: 2em;
+  opacity: .1;
+}
+footer a:hover, footer a:focus {
+  opacity: 1;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  width: 100vw;
+  margin: 0;
+  grid-gap: 1vw 1.5vh;
+  position: absolute;
+  top: -10vw;
+  left: -5vw;
+}
+figure {
+  height: 22vw;
+  width: 22vw;
+  margin: 0;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s
+}
+figure:nth-of-type(2n) {
+  background: linear-gradient(45deg, transparent, white);
+  background-color: var(--light);
+  -webkit-transform: skew(-10deg,-10deg);
+          transform: skew(-10deg,-10deg);
+  -webkit-box-shadow: -1vw -1vw 2vw 1px var(--bg),
+  -3vw -3vw 5vw RGBA(34, 33, 38, .5);
+          box-shadow: -1vw -1vw 2vw 1px var(--bg),
+  -3vw -3vw 5vw RGBA(34, 33, 38, .5);
+  -webkit-animation: b 1.5s alternate infinite;
+          animation: b 1.5s alternate infinite;
+  position: relative;
+}
+/* figure:nth-of-type(2n+1)::before {
+  position: absolute;
+  content: '<figure/>';
+  left: 15%;
+  top: 30%;
+  color: var(--light);
+  font-family: "Cookie";
+  font-size: 4em;
+  text-shadow: -2px 2px 3px RGBA(34, 33, 38, .3);
+} */
+@-webkit-keyframes b {
+  0% { -webkit-transform: translateY(-1vw) skew(-10deg,-10deg); transform: translateY(-1vw) skew(-10deg,-10deg); }
+  100% { -webkit-transform: translateY(1vw) skew(-10deg,-10deg); transform: translateY(1vw) skew(-10deg,-10deg); }
+}
+@keyframes b {
+  0% { -webkit-transform: translateY(-1vw) skew(-10deg,-10deg); transform: translateY(-1vw) skew(-10deg,-10deg); }
+  100% { -webkit-transform: translateY(1vw) skew(-10deg,-10deg); transform: translateY(1vw) skew(-10deg,-10deg); }
+}
+figure:nth-of-type(2n+1) {
+  background: linear-gradient(-15deg, transparent 35%, #C4CCB8 90%);
+  background-color: var(--dark);
+  -webkit-transform: skew(3deg,3deg);
+          transform: skew(3deg,3deg);
+  -webkit-animation: a 1.5s alternate infinite;
+          animation: a 1.5s alternate infinite;
+}
+@-webkit-keyframes a {
+  0% { -webkit-transform: skew(1deg,1deg); transform: skew(1deg,1deg); }
+  100% { -webkit-transform: skew(3deg,3deg); transform: skew(3deg,3deg); }
+}
+@keyframes a {
+  0% { -webkit-transform: skew(1deg,1deg); transform: skew(1deg,1deg); }
+  100% { -webkit-transform: skew(3deg,3deg); transform: skew(3deg,3deg); }
+}

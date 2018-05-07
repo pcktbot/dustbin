@@ -1,0 +1,56 @@
+:root {
+  --dark: RGBA(37, 43, 56, 1.00);
+  --mid: RGBA(168, 180, 171, 1.00);
+  --light: RGBA(223, 215, 202, 1.00);
+}
+*,*::before,*::after {
+  box-sizing: border-box;
+  border: 1px dotted RGBA(168, 180, 171, .5);
+}
+html, body {
+  margin: 0;
+  width: 100%;
+}
+.grid-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+}
+.grid-wrapper {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 100%;
+}
+.cube-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+figure,figure::before,figure::after {
+  width: 12.5vw; height: 12.5vw;
+  background-color: var(--dark);
+  margin: 0;
+  opacity: .5;
+  transform-origin: 50% 50% 0;
+}
+figure {
+  position: relative;
+  background-color: var(--dark);
+  border-top: 3px solid red;
+  transform: rotateY(0)
+  rotateX(60deg);
+  transform-style: preserve-3d;
+
+}
+figure::before {
+  content: '';
+  position: absolute;
+  transform: rotateY(-90deg) translateZ(150px);
+
+}
+figure::after {
+  content: '';
+  position: absolute;
+  transform: rotateY(90deg) translateZ(150px);
+}

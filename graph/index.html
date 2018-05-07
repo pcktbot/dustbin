@@ -1,0 +1,19 @@
+<head>
+  <link href="graph.css" rel="stylesheet" />
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+  <p>paragraph</p>
+  <p>paragraph</p>
+  <p>paragraph</p>
+  <p>paragraph</p>
+
+  <script>
+
+d3.selectAll('p').style('color', function() {
+  return 'hsl(' + Math.random() * 360 + ',100%,50%)';
+});
+d3.select('body').style('background-color', 'black');
+
+  </script>
+</body>

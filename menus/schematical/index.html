@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="schematical.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="grid main single">
+    <label class="">.main grid single</label>
+    <div class="flex row end">
+      <div class="wide">
+        <div class="top">VAR</div>
+        <pre class="elastic-type">Window: Top|Left</pre>
+        <pre class="elastic-type">Eye: Top|Left</pre>
+      </div>
+      <div class="wide">
+        <div class="top">xPos</div>
+        <pre id="xpos" class="elastic-type">100</pre>
+        <pre id="offset-left" class="elastic-type">45px</pre>
+      </div>
+      <div class="wide">
+        <div class="top">yPos</div>
+        <pre id="ypos" class="elastic-type">100</pre>
+        <pre id="offset-top" class="elastic-type">100px</pre>
+      </div>
+      <div class="max box headline">
+        <h2 class="">x: NEWEYEPOS(<span id="par1">par1</span>);</h2>
+        <label class="">Returns new pupil.style.left.</label>
+      </div>
+      <div class="wide">
+        <div class="top">Translate Origin</div>
+        <pre class="">Top Left Corner</pre>
+      </div>
+    </div>
+    <div class="flex row">
+      <div class="box around max flex col">
+        <span class="btn" id="aButton" href="#">A BUTTON</span>
+        <label class="min">Find Some Tops</label>
+      </div>
+      <div class="">
+        <div class="min top">X:IN</div>
+        <div class="min flex col">
+          <pre class="">Window</pre>
+          <pre class="">Eye</pre>
+          <pre class="">Scale</pre>
+        </div>
+      </div>
+      <div class="">
+        <div class="min top">X:OUT</div>
+        <div class="min flex col">
+          <pre class="">0-Window.width</pre>
+          <pre class="">0-(200-90px)</pre>
+          <pre class="">Scale Factor</pre>
+        </div>
+      </div>
+
+      <div class="wide">
+        <div class="top">METHODS</div>
+        <pre class="">The eye is 200x200px.</pre>
+        <pre>The pupil is top:0; left: 0;</pre>
+        <pre>relative to the eye.</pre>
+        <pre>Inner top: minmax(55px,55+190px),</pre>
+        <pre>left: minmax(5px,5px+190).</pre>
+      </div>
+    </div>
+
+    <div class="flex row"><!-- ROW THREE-->
+      <div class="box flex col around headline">
+        <h2 class="">NEWEYEPOS(<span id="par2">par2</span>);</h2>
+        <label class="">Returns new pupil.style.top</label>
+      </div>
+
+      <div class="mid">
+        <div class="top">TOP</div>
+        <div class="flex col mid">
+          <pre class="">{{value}}</pre>
+          <pre class="">{{value}}</pre>
+          <pre class="">{{value}}</pre>
+        </div>
+      </div>
+
+      <div class="box dark flex col middle around">
+        <label class="">[ EXAMPLE ]</label>
+        <label class="">.SPLIT | .BOX</label>
+        <div class="invert pair max">
+          <div class="top">.SPLIT .TOP</div>
+          <pre class="">.SPLIT DIV:LAST-CHILD</pre>
+        </div>
+      </div>
+      <!-- EYEBALL -->
+      <div class="eye-container">
+        <label class="">EYE LABEL</label>
+        <div id="lefteye" class="eye">
+          <div class="eye-inner"></div>
+            <div id="leftpupil" class="eye-pupil"></div>
+
+        </div>
+      </div>
+      <div class="max box">
+        <label class="top" id="response">#response</label>
+        <p class="">Paragraph text to get the best part looking its best. Now need to curve the pupil as tho it's an eye. Also keep the pupil within the borders of the eye, maybe using the inner element as a guide?</p>
+      </div>
+
+      <div class="">
+        <form class="box max flex col">
+          <div class="wide flex row middle">
+            <label for="first" class="">LABEL</label>
+            <input type="text" name="first" id="first" class="" placeholder="INPUT" />
+          </div>
+          <div class="wide flex row middle">
+            <label for="second" class="">LABEL</label>
+            <input type="text" name="second" id="second" class="" placeholder="INPUT" />
+          </div>
+          <div class="flex row wide middle">
+            <label for="third" class="">LABEL</label>
+            <input type="text" name="third" id="third" class="" placeholder="INPUT" />
+          </div>
+
+          <div class="flex row">
+            <div class="flex row max">
+              <div class="min">
+                <label for="zero" class="">0</label>
+                <input type="radio" value="0" name="binary"
+                       id="zero" class="" checked />
+              </div>
+              <div class="min">
+                <label for="one" class="">1</label>
+                <input type="radio" id="one" name="binary"
+                       value="1" class="" />
+              </div>
+            </div>
+            <button type="submit" class="btn" href="#">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+      <div class="mid">
+        <div class="top">TOP</div>
+        <div class="flex col mid">
+          <pre class="">{{value}}</pre>
+          <pre class="">{{value}}</pre>
+          <pre class="">{{value}}</pre>
+        </div>
+      </div>
+    </div><!-- END ROW THREE -->
+    <label>.grid.thirds</label>
+    <div class="grid thirds mid"><!-- ROW FOUR -->
+      <figure class="">
+        <div class="circle grey"></div>
+        <div class="bottom-half light"></div>
+      </figure>
+      <figure class="">
+        <div class=""></div>
+        <div class=""></div>
+      </figure>
+    </div><!-- END ROW FOUR -->
+    <div class="flex row"> <!-- START ROW FIVE -->
+      <div class="mid">
+        <div class="top">TOP</div>
+        <div id="figure-output" class="flex col mid">
+          <pre id="option-one" class="">{{#option-one}}</pre>
+          <pre id="option-two" class="">{{#option-two}}</pre>
+          <pre id="option-three" class="">{{#option-three}}</pre>
+        </div>
+      </div>
+      <div class="">
+        <form class="">
+          <label for="" class="">LABEL</label>
+          <select id="">
+            <option selected>OPTION</option>
+            <option value="FIRST">FIRST OPTION</option>
+            <option value="SECOND">SECOND OPTION</option>
+            <option value="THIRD">THIRD OPTION</option>
+          </select>
+          <label for="" class="">LABEL</label>
+          <checkbox />
+          <button type="submit" class="btn">BUTTON</button>
+        </form>
+      </div>
+
+    </div> <!-- END ROW FIVE -->
+    <div class="flex min"><!-- ROW SIX -->
+
+      <!-- <nav class="tabs">
+        <ul class="-primary">
+          <li><a class="btn" href="...">Falkenberg</a></li>
+          <li><a class="btn" href="...">Braga</a></li>
+          <li><a class="btn" href="...">Stockholm</a></li>
+          <li><a class="btn" href="...">Trnava</a></li>
+          <li><a class="btn" href="...">Plovdiv</a></li>
+          <li><a class="btn" href="...">Kiapeda</a></li>
+        </ul>
+      </nav> -->
+    </div>
+  </div><!-- END OF MAIN -->
+  <script async src="schematical.js" type="text/javascript"></script>
+</body>
+</html>

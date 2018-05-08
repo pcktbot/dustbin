@@ -10,8 +10,8 @@ function moveHandler(evt) {
   animateEyes(evt.clientX, evt.clientY);
 }
 function animateEyes(xPos, yPos) {
-  var leftEye = document.getElementById('lefteye');
-  var leftPupil = document.getElementById('leftpupil');
+  var leftEye = document.getElementById('eye');
+  var leftPupil = document.getElementById('pupil');
   // console.log(xPos + leftEye.offsetLeft + ", Top: " + leftEye.offsetTop);
   // console.log(document.getElementById('par1').innerText);
   document.getElementById('par1').innerText = xPos + ", " + leftEye.offsetLeft;

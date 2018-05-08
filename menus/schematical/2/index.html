@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SCHEMATICAL : PAGE 2</title>
+
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+  <link href="/defaults.css" rel="stylesheet" />
+  <link href="/schematical.css" rel="stylesheet" />
+</head>
+<body>
+<div class="flex col stretch">
+  <header class="flex row-reverse border">
+    <logo class="flex row-reverse grow scene">
+<!--###### (o) EYEBALL START ######-->
+<div class="eye-socket border">
+<label class="">SOCKET > INNER > PUPIL</label>
+<div id="eye" class="eye">
+<div class="eye-inner"></div>
+<div id="pupil" class="eye-pupil"></div>
+</div></div>
+<!--###### (o) EYEBALL END ######-->
+    <div class="flex col max pers">
+      <h1 class="top">Schematical</h1>
+      <p class="bright grow">Larger jottings that don't break the bank!</p>
+    </div>
+      <pre class="flex col stretch start borders">
+        <span id="xpos" class="">#NUM</span>
+        <span id="ypos" class="">#NUM</span>
+        <span id="par1" class="">#NUM</span>
+        <span id="par2" class="">#NUM</span>
+        <span id="offset-top" class="">#NUM</span>
+        <span id="offset-left" class="">#NUM</span>
+      </pre>
+    </logo>
+    <nav class="flex row min grow end">
+      <label class="">PAGES</label>
+      <a href="/" class="big grow btn">1</a>
+      <span href="/2/" class="big grow btn cur-page">2</span>
+    </nav>
+  </header>
+  <section class="grid onetwo">
+    <aside class="flex col stretch nowrap start">
+      <label class="border">HEADER > ASIDE</label>
+      <div class="info flex row end">
+        <div class="flex col min grow border">
+          <label class="top">Zoom</label>
+          <pre id="zoom" class="elastic-type">#zoom</pre>
+        </div>
+        <div class="flex col min stretch grow border">
+          <label class="top">Bearing</label>
+          <pre id="bearing" class="elastic-type">#bearing</pre>
+        </div>
+        <div class="flex col min grow border">
+          <label class="top">Pitch</label>
+          <pre id="pitch" class="elastic-type">#pitch</pre>
+        </div>
+        <div class="flex col stretch max border">
+          <label class="top">map.addControl()</label>
+          <p class="">Took some getting used to, but understanding a couple more things today. 'mapboxgl' is the default object from the external src. Its 'Map' node is set to a local 'map' variable, which is appended with methods like 'addControl()' which passes elements to be rendered within the map and 'getPitch()' which returns the camera pitch.</p>
+        </div>
+        <div class="flex row max stretch end">
+          <label class="">the Eye problem</label>
+          <a class="btn big bottom-right" href="/3/">3</a>
+        </div>
+      </div>
+    </aside>
+    <article class="grid single border">
+      <label class="">ARTICLE#MAP</label>
+      <div id="map" class="mappy"></div>
+    </article>
+  </section>
+  <section class="flex col stretch max">
+    <label class="headline elastic-type">NEXT SECTION</label>
+    <div class="flex row">
+      <form>
+        <label for="" class="">Label</label>
+        <input type="checkbox" checked=true id="" class="big" />
+      </form>
+    </div>
+  </section>
+  <script src="map.js" async type="text/javascript"></script>
+  <script async src="/schematical.js" type="text/javascript"></script>
+</body>
+</html>

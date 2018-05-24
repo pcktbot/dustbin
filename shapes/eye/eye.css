@@ -1,33 +1,69 @@
+:root {
+  --blue: #1F29B0;
+  --peach: #FF4B4A;
+  --peach-blend: RGBA(255,75,74,.5);
+}
+body { background-color: var(--blue) }
 label { position: fixed; width: 100%; top: 10px;
-font-family: monospace; letter-spacing: 1.2; color: purple;}
+font-family: monospace; letter-spacing: 1.2; color: var(--peach);}
 .face {
-  width: 800px; height: 400px;
+  width: 850px; height: 600px;
+  padding: 15px;
   position: relative;
-  margin: 200px auto auto;
-  border: 1px solid purple;
+  margin: 100px auto auto;
+  background-color: var(--peach);
+  border: 2px solid var(--peach);
+  /* background: radial-gradient(circle at bottom, var(--peach) 55%, var(--peach-blend)); */
+  border-radius: 50%;
+  box-shadow: 0 1vh 1vh var(--peach),
+      -1vw -2vh 3vh var(--peach-blend),
+      1vw -2vh 3vh var(--peach-blend),
+      -2vw -4vh 3vh var(--peach-blend),
+      2vw -4vh 3vh var(--peach-blend),
+      -3vw -8vh 3vh var(--peach-blend),
+      3vw -8vh 3vh var(--peach-blend),
+      -4vw -14vh 3vh var(--peach-blend),
+      4vw -14vh 3vh var(--peach-blend),
+      -4vw -20vh 3vh var(--peach-blend),
+      4vw -20vh 3vh var(--peach-blend);
+  /* filter: blur(10px); */
 }
 .eye {
-  width: 400px; height: 400px;
-  background-color: purple;
+  width: 400px; height: 380px;
+  background-color: var(--blue);
   border-radius: 50%;
-  position: absolute; top: 0;
+  position: absolute; top: 20px;
 }
-#lefteye, #leftpupil { left: 0; top: 0;}
-#righteye, #rightpupil { right: 0; top: 0;}
+#lefteye,
+#leftpupil { left: 0; top: 0;}
+#lefteye .eye-inner {
+  transform: rotate(-3deg);
+  left: 5px;
+  box-shadow: inset 2px 5px 15px var(--blue);
+}
+#righteye,
+#rightpupil { right: 0; top: 0;}
+#righteye .eye-inner {
+  transform: rotate(3deg);
+  right: 5px;
+  box-shadow: inset -2px 5px 15px var(--blue);
+}
 .eye-inner {
-  width:400px; height: 200px;
+  width:380px; height: 200px;
   background-color: white;
   border-radius: 50%;
   position: absolute;
   top: 100px;
+
 }
 .pupil {
-  background-color: purple;
+  background-color: var(--blue);
   width: 100px; height: 100px;
   border-radius: 50%;
   position: absolute;
-color: white;
-line-height: 5;
-text-align: center;
+  color: white;
+  line-height: 5;
+  text-align: center;
 }
-#leftpos { color: pink; } #rightpos { color: lightblue;}
+#leftpos { color: pink; }
+#rightpos { color: lightblue;}

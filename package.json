@@ -1,0 +1,45 @@
+{
+  "name": "dustbin",
+  "version": "1.0.0",
+  "description": "dustbin is a collection of exercises I've done as part of my web-learning.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcktbot/dustbin.git"
+  },
+  "keywords": [
+    "leftovers",
+    "dustbin",
+    "exercises",
+    "learning",
+    "html",
+    "css",
+    "js",
+    "node",
+    "grid"
+  ],
+  "author": "David Nave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcktbot/dustbin/issues"
+  },
+  "homepage": "https://github.com/pcktbot/dustbin#readme",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "paper": "^0.11.5",
+    "three": "^0.92.0"
+  },
+  "devDependencies": {
+    "webdash": "^1.4.0",
+    "webdash-npm-scripts": "^1.4.0",
+    "webdash-package-json": "^1.3.1",
+    "webdash-performance-budget": "^1.3.0",
+    "webdash-pwa-manifest": "^1.3.0",
+    "webdash-readme-preview": "^1.2.0",
+    "webdash-workbox": "^1.0.2",
+    "workbox-cli": "^3.2.0"
+  }
+}

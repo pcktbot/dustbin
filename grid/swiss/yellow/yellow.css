@@ -1,0 +1,22 @@
+:root {
+  --yellow: #EADC00;
+  --red: #D4100B;
+  --cream: #F2E9BC;
+}
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paper {
+  margin-top: 20px;
+  width: 500px; height: 700px;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+}

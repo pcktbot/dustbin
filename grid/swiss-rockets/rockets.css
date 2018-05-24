@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Asset');
+:root {
+  --default: #1D152C;
+  --display: 'Asset', cursive;
+}
+*,*::before,*::after {
+  box-sizing: border-box;
+  border: 1px solid var(--default);
+  font-family: var(--display);
+  font-size: 1.2em;
+  
+}
+body {
+  margin: 0;
+}

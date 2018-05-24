@@ -5,35 +5,22 @@ function moveHandler(evt) {
   if (!evt) {
     evt = window.event;
   }
-  document.getElementById('xpos').innerHTML = evt.clientX;
-  document.getElementById('ypos').innerHTML = evt.clientY;
+  // document.getElementById('xpos').innerHTML = evt.clientX;
+  // document.getElementById('ypos').innerHTML = evt.clientY;
   animateEyes(evt.clientX, evt.clientY);
 }
 function animateEyes(xPos, yPos) {
   var leftEye = document.getElementById('eye');
   var leftPupil = document.getElementById('pupil');
-  // console.log(xPos + leftEye.offsetLeft + ", Top: " + leftEye.offsetTop);
-  // console.log(document.getElementById('par1').innerText);
-  document.getElementById('par1').innerText = xPos + ", " + leftEye.offsetLeft;
-  document.getElementById('par2').innerText = yPos + "," + leftEye.offsetTop;
-  console.log("Pupil = " + leftPupil.style.top);
   leftPupil.style.top = String(90 / window.innerHeight * yPos) + "px";
   yNew = 90 / window.innerHeight * yPos;
   leftPupil.style.left = String(110 / window.innerWidth * xPos) + "px";
   xNew = 110 / window.innerWidth * xPos;
-  document.getElementById('offset-top').innerText = yNew.toFixed(2);
-  document.getElementById('offset-left').innerText = xNew.toFixed(2);
   function newEyePos(curPos, eyePos) {
-    // return Math.min(Math.max(curPos, eyePos+3), eyePos+17) + "%";
-    // console.log("curPos: " + curPos);
-    // console.log("eyePos: " + eyePos);
-    // console.log(Math.max(curPos, eyePos));
     return Math.min(
       Math.max(curPos, eyePos+55), eyePos+5
     ) + "px";
   }
-// document.getElementById('offset-top').innerText = leftPupil.style.top;
-
 }
 var form = document.querySelector('form');
 var response = document.querySelector('#response');

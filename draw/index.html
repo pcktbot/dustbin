@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="/node_modules/paper/dist/paper-full.min.js" type="text/javascript"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+      var path = new Path();
+      path.strokeColor = 'black';
+      var start = new Point(100,100);
+      path.moveTo(start);
+      path.lineTo(start + [ 100, -50 ]);
+    </script>
+    <script type="text/javascript" src="draw.js"></script>
+    <link rel="stylesheet" href="defaults.css" />
+    <link href="draw.css" rel="stylesheet" />
+  </head>
+  <body class="flex row around">
+    <div class="main">
+      <section id="paper-section">
+        <header class="grid thirds">
+          <div class="flew col start stretch">
+            <span class="">Left Text Line 1</span>
+            <span class="">Line 2</span>
+            <span class="">103</span>
+          </div>
+          <div class="">
+            <h1>Paper.js first...</h1>
+          </div>
+          <div class="">
+            <img src="" class="" />
+          </div>
+        </header>
+        <div class="grid onefourone canvas-wrapper">
+          <span class="">Some text running vertically</span>
+          <canvas class="" id="myCanvas" resize="true"></canvas>
+          <span class="">Other vertical text</span>
+        </div>
+        <footer class="">
+          <div class="">
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </body>
+</html>

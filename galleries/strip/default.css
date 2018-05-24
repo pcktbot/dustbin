@@ -1,0 +1,17 @@
+*,*::before,*::after {
+  text-decoration: none;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  margin: 0;
+}
+.btn-container {
+  padding: 2em;
+}
+.btn {
+  margin: 1.5em;
+  padding: .5em 1.5em;
+  border: 1px solid RGBA(75, 66, 57, 1.00);
+
+}

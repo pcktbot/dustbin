@@ -5,8 +5,9 @@
 
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
-  <link href="/defaults.css" rel="stylesheet" />
-  <link href="/schematical.css" rel="stylesheet" />
+  <link href="../defaults.css" rel="stylesheet" />
+  <link href="../schematical.css" rel="stylesheet" />
+
 </head>
 <body>
 <div class="flex col stretch">
@@ -20,9 +21,30 @@
 <div id="pupil" class="eye-pupil"></div>
 </div></div>
 <!--###### (o) EYEBALL END ######-->
-    <div class="flex col max pers">
+    <div class="flex col">
       <h1 class="top">Schematical</h1>
-      <p class="bright grow">Larger jottings that don't break the bank!</p>
+      <div class="perspective">
+        <label class="tab" for="tab-top">TOP</label>
+        <label class="tab" for="tab-front">FRONT</label>
+        <label class="tab" for="tab-bottom">BOTTOM</label>
+        <input id="tab-top" class="hidden" name="tabs" type="radio" />
+        <input id="tab-front" class="hidden" name="tabs" type="radio" />
+        <input id="tab-bottom" class="hidden" name="tabs" type="radio" />
+        <div class="cube">
+          <div class="tab-content">
+            <h1>TOP CONTENT</h1>
+            <p>THIS IS AWESOME</p>
+          </div>
+          <div class="tab-content">
+            <h1>FRONT CONTENT</h1>
+            <p>THIS IS COOL</p>
+          </div>
+          <div class="tab-content">
+            <h1>BOTTOM CONTENT</h1>
+            <p>THIS IS SWEET</p>
+          </div>
+        </div>
+      </div>
     </div>
       <pre class="flex col stretch start borders">
         <span id="xpos" class="">#NUM</span>
@@ -79,7 +101,7 @@
       </form>
     </div>
   </section>
-  <script src="map.js" async type="text/javascript"></script>
-  <script async src="/schematical.js" type="text/javascript"></script>
+  <script src="../map.js" async type="text/javascript"></script>
+  <script async src="../schematical.js" type="text/javascript"></script>
 </body>
 </html>

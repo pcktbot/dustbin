@@ -1,62 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
-  background: white;
-}
-
-.button {
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #f72359;
-  padding: 1em 2em;
-  border: none;
-  color: white;
-  font-size: 1.2em;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 100px;
-}
-.button span {
-  position: relative;
-  pointer-events: none;
-}
-.button::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #4405f7, transparent);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: width .2s ease, height .2s ease;
-  transition: width .2s ease, height .2s ease;
-}
-.button:hover::before {
-  --size: 400px;
-}
-</style>
+<link rel="stylesheet" href="/css/button.css" />
 </head>
 <body>
+<div class="border">
+  <h2>Add me to any DUSTBIN page. I'm <code>/css/button.css</code></h2>
 <button class="button">
-    <span>Hover me I'm awesome</span>
+    <span>button.button span</span>
 </button>
-
+<h2>There are two colors. A handoff between a script that takes the mousemove and calculates a new x,y for the offset of the radial-gradient. It hands these new x,y to the CSS by setting the value of two CSS variables (--x,--y) to the offsets in px.</h2>
+</div>
 <script>
 document.querySelector('.button').onmousemove = function (e) {
 
@@ -68,3 +22,4 @@ document.querySelector('.button').onmousemove = function (e) {
 };
 </script>
 </body>
+</html>

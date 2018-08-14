@@ -144,3 +144,11 @@ figure:hover:after {
     content: 'rotate3d(1,0,1,60deg) indigo';
     
 }
+.seven {
+  background-color: cadetblue;
+  z-index: 1;
+  transform: translate3d(0,0,0) rotate3d(1,1,0,60deg);
+}
+.seven:after {
+  content: 'rotate3d(1,1,0,60deg) cadetblue';
+}

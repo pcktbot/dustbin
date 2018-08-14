@@ -3,11 +3,24 @@
   --peach: #FF4B4A;
   --peach-blend: RGBA(255,75,74,.5);
 }
-body { background-color: var(--blue) }
-label { position: fixed; width: 100%; top: 10px;
-font-family: monospace; letter-spacing: 1.2; color: var(--peach);}
+body { background-color: var(--blue); margin: 0; }
+label { 
+  position: fixed;
+  z-index: 9999; 
+  top: 0;
+  font-family: monospace; 
+  letter-spacing: 1.2; 
+  color: var(--peach);
+}
+#scaleleft {
+  position: fixed;
+  z-index: 9999; 
+  top: 0;
+  border: 2px dotted yellowgreen;
+}
 .face {
   width: 850px; height: 600px;
+  transform-style: preserve-3d;
   padding: 15px;
   position: relative;
   margin: 100px auto auto;
@@ -36,14 +49,14 @@ font-family: monospace; letter-spacing: 1.2; color: var(--peach);}
 }
 #lefteye,
 #leftpupil { left: 0; top: 0;}
-#lefteye .eye-inner {
+#leftinner.eye-inner {
   transform: rotate(-3deg);
   left: 5px;
   box-shadow: inset 2px 5px 15px var(--blue);
 }
 #righteye,
 #rightpupil { right: 0; top: 0;}
-#righteye .eye-inner {
+#rightinner.eye-inner {
   transform: rotate(3deg);
   right: 5px;
   box-shadow: inset -2px 5px 15px var(--blue);

@@ -1,0 +1,13 @@
+<head>
+  <title>Maps</title>
+  <style>
+:root { --color: #FF9158; }    
+.btn { display: inline-block; padding: 1em 1.6em; border-radius: 4px; margin-top: 2rem; font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; position: relative; overflow: hidden; transition: all 250ms ease; } .btn:hover { color: white; cursor: pointer; } .btn:hover:after { animation-name: bgin; transform: skew(-45deg) translate(-50%); } .btn:after { content: ''; z-index: -1; width: 150%; height: 100%; display: block; position: absolute; top: 0; left: 50%; animation-name: bgout; animation-duration: 400ms; transform: skew(-45deg) translate(-150%); background-color: var(--color); } .btn--iris { border: 2px solid var(--color); color: var(--color); } .btn--iris:after { background-color: var(--color) } @keyframes bgin { from {transform: skew(-45deg) translate(-150%); } to {transform: skew(-45deg) translate(-50%); } } @keyframes bgout { from {transform: skew(-45deg) translate(-50%); } to {transform: skew(-45deg) translate(50%); } }
+  </style>
+</head>
+<body>
+  <div>
+    <a class="btn btn--iris" href="trail/index.html">Trail</a>
+    <a class="btn btn--iris" href="routes/index.html">Routes</a>
+  </div>
+</body>

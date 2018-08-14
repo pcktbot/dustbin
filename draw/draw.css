@@ -26,10 +26,14 @@
 
    font-family: var(--sans-serif);
 }
-canvas {
-}
-
+section { grid-gap: 30px; }
 .canvas-wrapper > canvas {
   background-color: var(--mid);
   box-shadow: 15px 15px 0 0 var(--orange);
+  transition: 0.3s ease-out;
+}
+.canvas-wrapper > canvas:hover,
+.canvas-wrapper > canvas:focus {
+  box-shadow: 0 0 0 0 var(--orange);
+
 }

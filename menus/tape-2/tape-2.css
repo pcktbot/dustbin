@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo:700');
+
+:root {
+  --display: 'Chivo', 'Helvetica Neue', sans-serif;
+  --display-weight: 700;
+  --mocha: #452D24;
+  --yellow: #F7D100;
+  --red: #FF0000;
+  --green-yellow: #E8F5C9;
+  --pale-grey: #E7EDE1;
+  --mid-grey: #8B8B87;
+}
+*,*::before,*::after {
+  font-family: var(--display);
+  font-weight: var(--display-weight);
+
+}
+body {
+  background-color: var(--pale-grey);
+  background-image: url(https://res.cloudinary.com/pocket-bots/image/upload/c_fill,f_auto,fl_lossy,q_auto:good,w_1200/v1527346045/wood-bg_dyd1f3.jpg);
+  -webkit-perspective: 1600px;
+          perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+          perspective-origin: 50% -240px;
+  /* background-image: url(wood-bg.jpg); */
+  margin-top: 15px;
+}
+.box {
+  grid-template-rows: 19fr 1fr;
+  width: 75vw; min-width: 500px;
+  height: 90vh; min-height: 600px;
+  padding: 3vw;
+  background-color: var(--pale-grey);
+  border-radius: 2px;
+  box-shadow: 0 2vh 4vh #333;
+  transition: .3s ease-out;
+  transform-origin: right center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+@keyframes lift {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(15px) rotateY(15deg);
+  }
+}
+.box:hover {
+  transform: translateY(-5vh) rotateX(5deg) rotateY(15deg);
+}
+.mocha { 
+  background-color: var(--mocha);
+  color: var(--green-yellow);
+}
+.yellow { color: var(--yellow);}
+.circle { 
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  margin: 0;
+  background-color: var(--mocha);
+}
+.underline {
+  border-bottom: 2px solid var(--green-yellow);
+}
+.cover {
+  grid-template-rows: 6fr 3fr;
+}
+.big {
+  font-size: 150px;
+  line-height: .8;
+}
+.bottom * {
+  margin: .4vh 0;
+}
+.linear-stripes {
+  background-color: var(--mocha);
+  background: repeating-linear-gradient(
+    -55deg,
+/*### START ### , #####  END  #####*/
+var(--mocha) 0, var(--mocha) 2%,
+var(--pale-grey) 2%, var(--pale-grey) 4%,
+var(--mocha) 4%, var(--mocha) 6%,
+var(--pale-grey) 6%, var(--pale-grey) 8%,
+var(--mocha) 8%, var(--mocha) 10%,
+var(--pale-grey) 10%, var(--pale-grey) 12%,
+var(--mocha) 12%, var(--mocha) 14%,
+var(--pale-grey) 14%, var(--pale-grey) 16%,
+var(--mocha) 16%, var(--mocha) 18%,
+var(--pale-grey) 18%, var(--pale-grey) 20%,
+var(--mocha) 20%, var(--mocha) 22%,
+var(--pale-grey) 22%, var(--pale-grey) 24%,
+var(--mocha) 24%, var(--mocha) 28%,
+var(--pale-grey) 28%, var(--pale-grey) 30%,
+var(--mocha) 30%, var(--mocha) 31.5%,
+var(--pale-grey) 31.5%, var(--pale-grey) 32.5%,
+/* then 3 thinner lines */
+var(--mocha) 32.5%, var(--mocha) 33.5%,
+var(--pale-grey) 33.5%, var(--pale-grey) 34%,
+var(--mocha) 34%, var(--mocha) 35.5%,
+var(--pale-grey) 35.5%, var(--pale-grey) 36%,
+var(--mocha) 36%, var(--mocha) 37.5%,
+var(--pale-grey) 37.5%, var(--pale-grey) 38%,
+var(--mocha) 38%, var(--mocha) 40%,
+var(--pale-grey) 40%, var(--pale-grey) 40.5%,
+/* then 1 hair line*/
+var(--mocha) 40.5%, var(--mocha) 43%,
+var(--pale-grey) 43%, var(--pale-grey) 43.5%,
+var(--mocha) 43.5%, var(--mocha) 50%,
+/* then red yellow then fat mocha */
+var(--red) 50%, var(--red) 65%, 
+var(--yellow) 65%, var(--yellow) 80%,
+var(--mocha) 80%, var(--mocha) 100% 
+  )
+}
+footer {
+  color: var(--mid-grey);
+}
+footer > * {
+  border-right: 1px solid var(--mid-grey);
+  font-size: .6em;
+}

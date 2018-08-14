@@ -28,7 +28,7 @@ h1 {
     top: 250px;
     color: white;
     opacity: .75;
-    font-size: 50px;`
+    font-size: 50px;
 }
 figure {
     display: block; position: absolute;
@@ -37,7 +37,7 @@ figure {
     opacity: .5;
     -webkit-transform-origin: 50% 50% 0;
             transform-origin: 50% 50% 0;
-        border-radius: 50%;
+        /* border-radius: 50%; */
 
 }
 .cube:hover {

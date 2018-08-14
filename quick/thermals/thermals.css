@@ -1,0 +1,67 @@
+:root {
+  --dark-green: #152F3F;
+  --shadow: #232323;
+  --light-red: RGBA(255,85,87,1.00);
+  --mid-red: RGBA(185,0,19,1.00);
+  --dark-red: #970000;
+  --white: #E6F2FB;
+  --size: 300px;
+}
+body {
+  background-color: var(--dark-green); 
+  margin: 0;
+}
+.stage {
+  perspective: 1000px;
+  perspective-origin: center;
+  position: relative;
+  width: 500px; margin: 10px auto;
+}
+.shape {
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  position: absolute;
+}
+.card {
+  position: absolute;
+  width: var(--size); height: var(--size);
+  color: white;
+}
+.card-shadow {
+  position: absolute;
+  background-color: var(--shadow);
+  width: 300px; height: 300px;
+}
+.lt-red {
+  background-color: var(--light-red);
+  transform: 
+    rotateX(60deg) rotateY(0) rotateZ(-5deg) 
+    translateX(0) translateY(0) translateZ(-100px)
+    rotate(45deg);
+}
+.top {
+  transform: 
+    rotateX(60deg) rotateY(0) rotateZ(-5deg) 
+    translateX(0) translateY(0) translateZ(-200px)
+    rotate(15deg);
+}
+.red {
+  background-color: var(--mid-red);
+  transform: 
+    rotateX(60deg) rotateY(0) rotateZ(-5deg) 
+    translateX(0) translateY(0) translateZ(-300px)
+    rotate(45deg);
+}
+.bottom {
+  transform: 
+    rotateX(60deg) rotateY(0) rotateZ(-5deg) 
+    translateX(0) translateY(0) translateZ(-400px)
+    rotate(15deg);
+}
+.dark-red {
+  background-color: var(--dark-red);
+  transform: 
+    rotateX(60deg) rotateY(0) rotateZ(-5deg) 
+    translateX(0) translateY(0) translateZ(-500px)
+    rotate(45deg);
+}

@@ -1,6 +1,6 @@
 // initialize
-// var xPos = "onmousemove";
-// var yPos = "onmousemove";
+var xPos = "onmousemove";
+var yPos = "onmousemove";
 document.onmousemove = moveHandler;
 
 function moveHandler(evt) {
@@ -15,59 +15,55 @@ function moveHandler(evt) {
   document.getElementById('ypos').innerText = yPos;
 
 // get new pupil positions
-  animateLeftEye(evt.clientX, evt.clientY);
+  animateEyes(evt.clientX, evt.clientY);
   // animateRightEye(evt.clientX, evt.clientY);
 }
 
-function animateRightEye(xPos, yPos) {
-  // get right eye and pupil from DOM
-  var eye = document.getElementById('righteye');
-  var pupil = document.getElementById('rightpupil').style;
-
-// calc new pupil y-position with boundaries
-  if (90 / window.innerHeight * yPos < 33) {
-    yNew = 33;
+function animateEyes(xPos, yPos) {
+  var eye = document.getElementById('lefteye');
+  var pupil = document.getElementById('leftpupil');
+  var inner = document.getElementById('leftinner');
+  var pov = document.querySelector('#scaleleft');
+  // set the viewframe to the width of the window - border width
+  pov.style.width = String(window.innerWidth - 4) + "px";
+  pov.style.height = String(
+   ( (window.innerWidth - 4) * 
+    inner.offsetHeight / 
+    inner.offsetWidth ) +
+    pupil.offsetHeight / 2
+  ) + "px";
+  pov.style.top = String(
+    document.querySelector('.face').offsetTop +
+    eye.offsetTop +
+    inner.offsetTop +
+    (inner.offsetHeight / 2) - 
+    (pov.offsetHeight / 2) + 
+    (pupil.offsetHeight / 2)
+  ) + "px";
+    
+  
+  pupil.style.left = String(
+    inner.offsetWidth / 2 - (pupil.offsetWidth / 2)
+  ) + "px";
+  pupil.style.top = String(
+    inner.offsetHeight / 2 - (pupil.offsetHeight / 2)
+  ) + "px";
+  if (yPos < (pov.offsetTop - 2)) {
+    pupil.style.top = String(0) + "px";
   } else {
-    yNew = 90 / window.innerHeight * yPos;
+    pupil.style.top = String(
+      yPos * inner.offsetHeight / window.innerHeight
+    ) + "px";
   }
-  pupil.style.top = String(yNew) + "px";
-
-// calc new pupil x-position with boundaries
-  if (380 / window.innerWidth * xPos < 10) {
-    xNew = 10;
-  } else if (380 / window.innerWidth * xPos > 350) {
-    xNew = 350;
-  } else {
-    xNew = 380 / window.innerWidth * xPos;
-  }
-  pupil.style.left = String(xNew) + "px";
-
+  // calculate new from old
+  // xNew = window.innerWidth * xPos / inner.offsetWidth;
+  // yNew = window.innerHeight * yPos / inner.offsetHeight;
+  // write new to css value
+  // pupil.style.top = String(yNew) + "px";
+  // pupil.style.left = String(xNew) + "px";
+}
+function newEyePos(curPos, eyePos) {
+  return Math.min();
 }
 
-  function animateLeftEye(xPos, yPos) {
-    var eye = document.getElementById('lefteye');
-    var pupil = document.getElementById('leftpupil');
-
-    if (90 / window.innerHeight * yPos < 33) {
-      yNew = 33;
-    } else {
-      yNew = 90 / window.innerHeight * yPos;
-    }
-    pupil.style.top = String(yNew) + "px";
-    document.getElementById('ypos').innerText = yNew.toFixed(2);
-
-    if (380 / window.innerWidth * xPos < 10) {
-      xNew = 10;
-    } else if (380 / window.innerWidth * xPos > 280) {
-      xNew = 280;
-    } else {
-      xNew = 380 / window.innerWidth * xPos;
-    }
-    pupil.style.left = String(xNew) + "px";
-    // document.getElementById('xpos').innerText = xNew.toFixed(2);
-
-  }
-  function newEyePos(curPos, eyePos) {
-    return Math.min();
-    var xPosMax = "8.3px";
-  }
+lefteye.style.right = window.innerWidth / 2

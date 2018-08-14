@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Draw - JS Canvas Libraries</title>
     <script src="/node_modules/paper/dist/paper-full.min.js" type="text/javascript"></script>
-    <script type="text/paperscript" canvas="myCanvas">
+    <script src="/node_modules/animejs/anime.min.js" type="text/javascript"></script>
+    <script type="text/paperscript" canvas="paper-canvas">
       var path = new Path();
       path.strokeColor = 'black';
       var start = new Point(100,100);
       path.moveTo(start);
       path.lineTo(start + [ 100, -50 ]);
     </script>
-    <script type="text/javascript" src="draw.js"></script>
     <link rel="stylesheet" href="defaults.css" />
     <link href="draw.css" rel="stylesheet" />
   </head>
   <body class="flex row around">
     <div class="main">
-      <section id="paper-section">
-        <header class="grid thirds">
-          <div class="flew col start stretch">
-            <span class="">Left Text Line 1</span>
-            <span class="">Line 2</span>
-            <span class="">103</span>
-          </div>
-          <div class="">
-            <h1>Paper.js first...</h1>
-          </div>
-          <div class="">
-            <img src="" class="" />
-          </div>
-        </header>
-        <div class="grid onefourone canvas-wrapper">
-          <span class="">Some text running vertically</span>
-          <canvas class="" id="myCanvas" resize="true"></canvas>
-          <span class="">Other vertical text</span>
+      <section class="grid single" id="paper-section">
+        <div class="grid single">
+          <h1>Paper.js first...</h1>
+        </div>
+<!-- Paper JS Canvas  -->
+        <div class="grid single canvas-wrapper">
+          <canvas id="paper-canvas" resize="true" width="600" height="600"></canvas>
+        </div>
+
+        <div class="grid single">
+          <h1>Rough.js Second...</h1>
+        </div>
+<!-- Rough JS Canvas -->
+        <div class="grid single canvas-wrapper">
+          <canvas id="rough-canvas" resize="true" width="600" height="600"></canvas>
         </div>
         <footer class="">
           <div class="">
@@ -43,7 +40,20 @@
           </div>
         </footer>
       </section>
-
+      <section class="">
+        <div class="grid single">
+          <h1>Animejs...</h1>
+        </div>
+<!-- Anime JS Canvas -->
+        <div class="grid single canvas-wrapper">
+          <div id="JSobject">
+            <pre>{"charged":"29%"}</pre>
+          </div>
+          <canvas id="anime-canvas" resize="true" width="600" height="600"></canvas>
+        </div>
+      </section>
     </div>
+    <script src="rough.min.js" async></script>
+    <script type="text/javascript" src="draw.js" async></script>
   </body>
 </html>

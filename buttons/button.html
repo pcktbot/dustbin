@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" href="/css/button.css" />
+<style>
+
+  .border { 
+    border: 1px solid black;
+
+  }
+
+</style>
 </head>
 <body>
 <div class="border">
@@ -10,6 +18,8 @@
     <span>button.button span</span>
 </button>
 <h2>There are two colors. A handoff between a script that takes the mousemove and calculates a new x,y for the offset of the radial-gradient. It hands these new x,y to the CSS by setting the value of two CSS variables (--x,--y) to the offsets in px.</h2>
+<p>Primary Color: </p>
+<input type="text" id="primary" />
 </div>
 <script>
 document.querySelector('.button').onmousemove = function (e) {
@@ -20,6 +30,10 @@ document.querySelector('.button').onmousemove = function (e) {
     e.target.style.setProperty('--x', x + 'px');
     e.target.style.setProperty('--y', y + 'px');
 };
+var primaryColor = document.getElementById('primary');
+primaryColor.addEventListener('submit', event => {
+  document.querySelector('.button').style.background = primaryColor.innerText;
+})
 </script>
 </body>
 </html>

@@ -1,13 +1,23 @@
-  mapboxgl.accessToken = 'pk.eyJ1IjoicGNrdGJvdCIsImEiOiJjaWptN2RoNWowMGFqdTRtNXU1eXJiamNvIn0.AutBu3LTlsHnqRGbRU4bmg';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/pcktbot/cjg5q60h5ay0u2srysloy6ryc',
-    center: [ -121.316722, 44.062191 ],
-    pitch: 60,
-    bearing: -30,
-    zoom: 14.61,
-    attributionControl: false
-  });
+mapboxgl.accessToken = 'pk.eyJ1IjoicGNrdGJvdCIsImEiOiJjaWptN2RoNWowMGFqdTRtNXU1eXJiamNvIn0.AutBu3LTlsHnqRGbRU4bmg';
+
+//summon a map
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/pcktbot/cjg5q60h5ay0u2srysloy6ryc',
+  center: [ -121.316722, 44.062191 ],
+  pitch: 60,
+  bearing: -30,
+  zoom: 14.61,
+  attributionControl: false
+});
+
+map.on('load', () => {
+  map.addSource('myRoutes', {
+    type: 'vector',
+    url: 'pcktbot.cjeo9dphi05bh2wlt6en9s3f3-2n2wn'
+  })
+})
+
 //outside the map
 var pitch = document.getElementById('pitch');
 var bearing = document.getElementById('bearing');

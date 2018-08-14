@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title #{projectName}
+    link(
+      rel="stylesheet"
+      href="defaults.css"
+    )
+    - var cssHref = cssFileName;
+    link(
+      rel="stylesheet"
+      href=cssHref
+    )
+  body
+    .main
+      canvas.paper
+    footer
+    script(src="")
+

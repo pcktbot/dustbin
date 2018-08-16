@@ -6,25 +6,31 @@
   <link rel="stylesheet" href="tape.css" />
 </head>
 <body class="flex col">
-  <div class="box flex col min">
-    <div class="grid onetwo">
-      <h1 class="invert">A</h1>
-      <div class="flex col end right">
-        <h4 class="checkbox">IN</h4>
-        <h4 class="checkbox">OUT</h4>
-        <span class="underline"></span>
-        <span class="underline"></span>
-      </div>
+  <div class="box flex col min border">
+    <div class="grid onetwo small-gap">
+      <h1 onclick="" class="invert">$</h1>
+      <form class="right flex col start stretch">
+        <div class="flex end">
+          <input type="radio" name="months" checked />
+          <label for="months" class="checkbox">MO</label>
+          <input type="radio" name="years" />
+          <label for="years" class="checkbox">YR</label>
+        </div>
+        <input type="text" placeholder="Loan Amount 0.00" class="underline" />
+        <input placeholder="Interest Rate 0.0%" type="text" class="underline" />
+        <input type="text" placeholder="Term Length" class="underline" />
+      </form>
     </div>
-    <div class="flex col stretch bars-container">COLORS
+    <div class="flex col stretch bars-container">
       <span class="green"></span>
       <span class="yellow"></span>
       <span class="black"></span>
       <span class="red"></span>
       <span class="blue"></span>
     </div>
-    <div class="">
-      <h1 class="title">D-<span class="blue-text">C60</span></h1>
+    <div class="flex col max">
+      <h1 class="title">$ <span id="payment" class="blue-text">388.23</span>
+      </h1>
       <h6>MAGNETIC TAPE SOUND</h6>
       <h6>RECORDING FORMAT</h6>
       <p class="blue-text">FOR AUDIO/SOUND RECORDING AND PLAYBACK</p>

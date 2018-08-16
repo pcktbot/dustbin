@@ -1,0 +1,87 @@
+ul.starbursts {
+	list-style:none;
+	margin:20px auto;
+	padding:0;
+	overflow:hidden;
+}
+ul.starbursts li {
+	width:100vh;
+	height:100vh;
+	position:relative;
+}
+ul.starbursts * {
+	margin:0;
+	padding:0;
+	line-height:1.2em;
+}
+.starburst3 {
+	display:block;
+	width:30em;
+	height:30em;
+	-webkit-transform:rotate(-67.5deg);
+	-moz-transform:rotate(-67.5deg);
+	rotation:-67.5deg;
+	position:relative;
+	top:12em;
+	left:12em;
+	text-align:center;
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+	font-family:Arial, sans-serif;
+	font-size: 18px;
+	-moz-transition: all 0.1s ease-out;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+    box-shadow: 0 0 300px rgba(0,0,0,.5);
+}
+.starburst3 span {
+	display:block;
+	width:30em;
+	height:30em;
+	background:radial-gradient(#FEEE35 75%, #FBC24B 95%);
+	-webkit-transform:rotate(11.25deg);
+	-moz-transform:rotate(11.25deg);
+	rotation:12.5deg;
+
+}
+.starburst3 span.inner::before {
+    content: "Who doesn't like free rent?";
+    vertical-align: middle;
+    position: absolute;
+    text-align: center;
+    left: -2em;
+    top: 2em;
+    margin-left: .6em;
+    line-height: 1;
+    font-size: 3.2em;
+    transform: rotate(-21.8deg);
+    color: #579F23;
+    font-weight: 100;
+    text-shadow: 0 1px 2px #579F23, 0 0 4px #FBC24B;
+}
+@media screen and (max-width: 20em) {
+	.startburst3 span.inner::before {
+		content: 'Test to serve additional content for mobile users.';
+	}
+}
+.starburst3 span.inner::after {
+    content: "This is our most popular special and may be the special for you. Click for Details...";
+    position: absolute;
+    vertical-align: middle;
+    text-align: center;
+    transform: rotate(-21.8deg);
+    left: -2em;
+    margin-left: 2em;
+    top: 5em;
+    font-size: 2.4em;
+    line-height: 1;
+    color: #579F23;
+    text-shadow: 0 1px 1px #579F23, 0 0 6px #FBC24B;
+}
+.starburst3:hover span {
+    background: #579F23;
+}
+.starburst3:hover span.inner::before, .starburst3:hover span.inner::after {
+    color: white;
+}

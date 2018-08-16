@@ -415,15 +415,15 @@ map.on('load', function() {
     "type": "geojson",
     "data": point
   });
-  map.addLayer({
-    "id": "animated-route",
-    "source": "animated-route",
-    "type": "line",
-    "paint": {
-      "line-width": 1,
-      "line-color": "#5149CF"
-    }
-  });
+  // map.addLayer({
+  //   "id": "animated-route",
+  //   "source": "animated-route",
+  //   "type": "line",
+  //   "paint": {
+  //     "line-width": 1,
+  //     "line-color": "#5149CF"
+  //   }
+  // });
   map.addLayer({
     "id": "animated-point",
     "source": "animated-point",
@@ -461,20 +461,20 @@ map.on('load', function() {
 
   map.addSource('my-routes', {
     "type": "geojson",
-    "data": "./all.geojson"
+    "data": "/routes/all.geojson"
   });
   // add all lines
-  // map.addLayer({
-  //   "id": "my-line",
-  //   "type": "line",
-  //   "source": "my-routes",
-  //   "layout": {},
-  //   "paint": {
-  //     "line-width": 2,
-  //     "line-color": "#5149CF"
-  //   },
-  //   "filter": ["==", "$type", "LineString"]
-  // });
+  map.addLayer({
+    "id": "my-line",
+    "type": "line",
+    "source": "my-routes",
+    "layout": {},
+    "paint": {
+      "line-width": 2,
+      "line-color": "#5149CF"
+    },
+    "filter": ["==", "$type", "LineString"]
+  });
   // add all symbols
   map.addLayer({
     "id": "my-symbols",

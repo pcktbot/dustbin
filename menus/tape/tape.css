@@ -21,22 +21,69 @@ body {
   justify-content: center;
   vertical-align: middle;
   align-items: center;
+  border: 1px solid pink;
 }
 .box {
-  max-width: 800px; width: 60vw;
-  max-height: 1200px; height: 80vh;
   padding: 20px;
   background-color: var(--pale-grey);
-  box-shadow: 0 2px 4px var(--light-grey);
 }
 .right {
   text-align: right;
 }
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+.small-gap { grid-gap: 20px;}
 h1 {
   font-size: 7rem;
 }
+footer * {
+  padding-top: 20px;
+  color: var(--light-grey);
+}
+.underline {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 2px solid var(--mocha);
+  background: transparent;
+  font-size: 2rem;
+  color: var(--mocha);
+  text-align: right;
+}
+.bars-container * {
+  height: 50px; width: 100%;
+  transition: .3s ease-out;
+}
+.bars-container *:hover,
+.bars-container *:focus {
+  opacity: .7;
+}
+.green { background-color: var(--green) }
+.yellow { background-color: var(--yellow) }
+.black { background-color: var(--mocha) }
+.red { background-color: var(--red) }
+.blue { background-color: var(--blue) }
+.blue-text { color: var(--blue) }
 .invert {
   background-color: var(--mocha);
   color: var(--pale-grey);
-  padding: 0 25px;
+  text-align: center;
+  transition: .3s ease-out;
+}
+.invert:hover, .invert:focus {
+  color: var(--mocha);
+  background-color: var(--pale-grey);
+  box-shadow: 10vw 0 0 var(--green),
+  20vw 0 0 var(--yellow),
+  30vw 0 0 var(--mocha),
+  40vw 0 0 var(--red),
+  50vw 0 0 var(--blue);
+}
+.invert:active {
+  box-shadow: 1vw 0 0 var(--green),
+  2vw 0 0 var(--yellow),
+  3vw 0 0 var(--mocha),
+  4vw 0 0 var(--red),
+  5vw 0 0 var(--blue);
 }

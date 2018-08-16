@@ -1,0 +1,1 @@
+// (amount * apr + amount) / terms  

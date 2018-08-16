@@ -73,7 +73,7 @@ html::before {
               90vw 5vh .3vmin rgba(255,255,255,.8);
 }
 
-html::after { 
+html::after {
   box-shadow: 67vw 35vh .2vmin .1vmin rgba(255,200,200,.8),
               89vw 13vh .2vmin .1vmin rgba(255,200,200,.8),
               77vw 62vh .2vmin .1vmin rgba(255,200,200,.8),
@@ -175,11 +175,11 @@ em {
   text-align: center;
 }
 
-/*em.planet {
+em.planet {
   -webkit-animation: planet-rotate 4s linear infinite;
           animation: planet-rotate 4s linear infinite;
   position: relative;
-}*/
+}
 
 em.planet::before {
   content: "";

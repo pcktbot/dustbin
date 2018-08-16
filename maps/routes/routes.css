@@ -88,7 +88,76 @@ h2,h3,h4 {
   width: 100%;
   max-width: 100%;
 }
+/* COMPASS EFFECT */
+.hole {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.pin { position: absolute; top: 0; }
+.triangle { fill: var(--tertiary) }
+.compass {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--mercury);
+  background-color: #fff;
+}
+.compass:after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  color: var(--mercury);
+  font-size: 30px;
+  font-weight: 100;
+}
+.compass .n {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.compass .n:before {
+  font-weight: bold;
+  color: var(--tertiary);
+  content: 'N';
+}
+.compass .s {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.compass .s:before { content: 'S' }
+.compass .w {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.compass .w:before { content: 'W' }
+.compass .e {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.compass .e:before { content: 'E' }
 
+/* SLIDER BUTTONS */
 .btn {
   display: inline-block;
   padding: 1em 1.6em;

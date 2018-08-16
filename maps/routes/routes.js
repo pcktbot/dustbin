@@ -7,14 +7,19 @@ if (!mapboxgl.supported()) {
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/pcktbot/cjjd09alh7iuz2rp6i53akyxc',
-    center: [-123.091202, 44.053432],
-    zoom: 11.5
+    // Bend center
+    center: [ -121.33, 44.05 ],
+    zoom: 9.3
+    // Eugene center
+    // center: [-123.091202, 44.053432],
+    // zoom: 11.5
   });
 }
 
 // controls outside the map
 var pitch = document.getElementById('pitch');
 var bearing = document.getElementById('bearing');
+var compass = document.getElementById('compass-bearing');
 var zoom = document.getElementById('zoom');
 var mousePos = {
   xPos: document.getElementById('x-pos'),
@@ -404,6 +409,7 @@ map.on('load', function() {
   // set itial values for external parts
   pitch.innerHTML = map.getPitch().toFixed(1);
   bearing.innerHTML = map.getBearing().toFixed(1);
+  compass.style.transform = 'rotate(' + map.getBearing().toFixed(4) + 'deg) translateZ(0)';
   zoom.innerHTML = map.getZoom().toFixed(1);
 
   // for animated symbol
@@ -463,18 +469,7 @@ map.on('load', function() {
     "type": "geojson",
     "data": "./all.geojson"
   });
-  // add all lines
-  // map.addLayer({
-  //   "id": "my-line",
-  //   "type": "line",
-  //   "source": "my-routes",
-  //   "layout": {},
-  //   "paint": {
-  //     "line-width": 2,
-  //     "line-color": "#5149CF"
-  //   },
-  //   "filter": ["==", "$type", "LineString"]
-  // });
+
   // add all symbols
   map.addLayer({
     "id": "my-symbols",
@@ -499,6 +494,22 @@ map.on('load', function() {
     "filter": ["==", "$type", "Polygon"]
   });
   
+  // smaller data set in geojson file
+  map.addSource('yesterday', {
+    "type": "geojson",
+    "data": "/geo/2018-08-15.geojson"
+  });
+  map.addLayer({
+    "id": "movements",
+    "type": "line",
+    "source": "yesterday",
+    "layout": {},
+    "paint": {
+      "line-width": 2,
+      "line-color": "#F51945"
+    },
+    "filter": ["==", "$type", "LineString"]
+  });
 
   /**
   * INIT FLY-TO EVENTS
@@ -543,6 +554,11 @@ map.on('load', function() {
 map.on('move', function(){
   pitch.innerHTML = map.getPitch().toFixed(1);
   bearing.innerHTML = map.getBearing().toFixed(1);
+  if (Math.sign(map.getBearing()) === 1) {
+    compass.style.transform = 'rotate(-' + map.getBearing().toFixed(4) + 'deg) translateZ(0)';
+  } else {
+    compass.style.transform = 'rotate(' + Math.abs(map.getBearing().toFixed(4)) + 'deg) translateZ(0)';
+  }
   zoom.innerHTML = map.getZoom().toFixed(1);
 });
 

@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "name": "Broken Portland",
+      "description": "Maps had trouble rendering some of the chunks resulting in some serious texture popping.",
+      "Category": "Apple Maps",
+      "url": "map-captures/001.png",
+      "zoom-level": null,
+      "pitch-level": null,
+      "bearing-level": null
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [ -122.68, 45.52 ]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "name": "",
+      "description": "",
+      "Category": "",
+      "url": "",
+      "zoom-level": null,
+      "pitch-level": null,
+      "bearing-level": null
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    }
+  }]
+}

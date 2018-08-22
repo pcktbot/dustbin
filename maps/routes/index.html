@@ -5,184 +5,213 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <meta name="theme-color" content="#000000">
   <title>Routes Map</title>
+  <base href="/maps/" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet"/>
-  <!-- <link href="../css/bricklayer.css" rel="stylesheet"/> -->
-  <script src="../js/mapbox-gl.js"></script>
-  <link href="../css/mapbox-gl.css" rel="stylesheet"/>
-  <link href="../css/geocoder.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="routes.css" />
+  <script src="js/mapbox-gl.js"></script>
+  <link href="css/mapbox-gl.css" rel="stylesheet"/>
+  <link href="css/geocoder.css" rel="stylesheet"/>
+  <link href="routes/routes.css" rel="stylesheet"/>
 </head>
 <body>
   <div class="wrapper">
+    <!-- TWO ITEMS MAP & SIDEBAR -->
     <div id="map"></div>
     
     <div class="sidebar">
     
-      <div class="header">
-        <h1 class="city">City, ST</h1>
-        <h4 class="label">Description</h4>
-      </div>
+      <!-- .HEADER & .BODY -->
+      <div class="header really-soft">
+        <h1>Routes and Mapbox</h1>
+        <h4>Using Timeline data from Google, converted to JSON and manipulated by mapbox-gl.</h4>
+        
+        <div class="grid thirds">
+          <span class="pair">
+            <h4>Primary</h4>
+            <label class="switch">
+              <input id="theme-toggle" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </span>
+
+          <span class="pair">
+            <h4>Secondary</h4>
+            <label class="switch">
+              <input id="-toggle" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </span>
+
+          <span class="pair">
+            <h4>Tertiary</h4>
+            <label class="switch">
+              <input id="--toggle" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </span>
+
+        </div>
+
+
+      </div><!-- END .HEADER -->
       
-      <div class="padding-wrapper">
+      <div class="body">
 
-        <h2>Geocoder</h2>
-        <div class="geocoder" id="geocoder"></div>
 
-        <h2>Map & Mouse Positions</h2>
-        <div class="flex single space-around stretch">
-          
-          <div class="pair grow flex col justify-center">
-            <h4 class="label">Latitude</h4>
-            <p id="lat-pos">-122.33</p>
+        <article class="card">
+          <h2 class="single-heading">Geocoder</h2>
+          <div class="pair flex col single stretch justify-center">
+            <h4 class="label">Address Search</h4>
+            <div class="" id="geocoder"></div>
           </div>
-          <div class="pair grow flex col justify-center">
-            <h4 class="label">Longitude</h4>
-            <p id="lng-pos">43.93</p>
-          </div>
+        </article>
 
-          <div class="pair grow flex col justify-center">
-            <h4 class="label">X</h4>
-            <p id="x-pos">43.93</p>
-          </div>
-          <div class="pair grow flex col justify-center">
-            <h4 class="label">Y</h4>
-            <p id="y-pos">43.93</p>
-          </div>
-        
-        </div>
-
-        <h2>Camera</h2>
-        <div class="flex single space-around stretch">
-
-          <div class="pair grow">
-            <h4 class="label">Pitch</h4>
-            <p id="pitch">0.00</p>
-          </div>
-          <div class="pair grow col align-center justify-center flex">
-            <h4 class="label">Bearing</h4>
+        <article class="card">
+          <h2 class="single-heading">Map & Mouse Positions</h2>
+          <div class="flex single space-around stretch">
             
-            <div class="hole">
-                <div class="pin">
-                  <svg height="40" width="40">
-                    <polygon class="triangle" points="10,0 30,0 20,10"></polygon>
-                  </svg>
-                </div>
-                <div id="compass-bearing" class="compass">
-                  <div class="n"></div>
-                  <div class="s"></div>
-                  <div class="w"></div>
-                  <div class="e"></div>
-                </div>
-              </div>
-              <p id="bearing">0.00</p>
+            <div class="pair grow flex col justify-center">
+              <h4 class="label">Latitude</h4>
+              <p id="lat-pos">-122.33</p>
+            </div>
+            <div class="pair grow flex col justify-center">
+              <h4 class="label">Longitude</h4>
+              <p id="lng-pos">43.93</p>
+            </div>
 
-          </div>
+            <div class="pair grow flex col justify-center">
+              <h4 class="label">X</h4>
+              <p id="x-pos">43.93</p>
+            </div>
+            <div class="pair grow flex col justify-center">
+              <h4 class="label">Y</h4>
+              <p id="y-pos">43.93</p>
+            </div>
           
-          <div class="pair col flex grow">
-            <h4 class="label">Zoom</h4>
-            <p id="zoom">0.00</p>
-            <a class="btn btn--iris" id="zoom-in">+</a>
-            <a class="btn btn--iris" id="zoom-out">-</a>
+          </div>
+        </article>
+
+        <article class="card">
+          
+          <h2 class="single-heading">Map Click Position</h2>
+          
+          <div class="flex single space-around stretch">
+          
+            <div class="pair grow flex col justify-center">
+              <h4 class="label">Latitude</h4>
+              <p id="click-lat-pos">-122.33</p>
+            </div>
+
+            <div class="pair grow flex col justify-center">
+              <h4 class="label">Longitude</h4>
+              <p id="click-lng-pos">43.93</p>
+            </div>
+
+            <div class="pair grow flex col justify-center">
+              <label>
+                <h4>Map Style</h4>
+                <select class="min-padding" id="available-styles">
+                  <option selected>Select a Style</option>
+                </select>
+                <button class="min-padding" onclick="loadCallback()">Reload Layers</button>
+              </label>
+            </div>
+
           </div>
 
-        </div>
+        </article>
 
-        <h2>Assortments</h2>
-        <div class="flex grow justify-center">
+        <article class="card">
+          <h2 class="single-heading">Camera</h2>
+          <div class="flex single flex-wrap justify-flex-start stretch">
 
-          <!-- <div class="hole">
-            <div class="pin">
-              <svg height="40" width="40">
-                <polygon class="triangle" points="10,0 30,0 20,10"></polygon>
-              </svg>
+            <div class="pers pair col justify-center flex">
+
+              <div class="pair col flex">
+                <h4 class="label">Bearing</h4>
+                <p id="bearing">0.00</p>
+              </div>
+
+              <div class="pair col flex">
+                <h4 class="label">Pitch</h4>
+                <p id="pitch">0.00</p>
+              </div>
+
             </div>
-            <div id="compass-bearing" class="compass">
-              <div class="n"></div>
-              <div class="s"></div>
-              <div class="w"></div>
-              <div class="e"></div>
+
+            <div class="flex align-center">
+              <!-- BEARING PITCH OBJECT -->
+              <div class="hole">
+                  <div class="pin">
+                    <svg height="40" width="40">
+                      <polygon class="triangle" points="10,0 30,0 20,10"></polygon>
+                    </svg>
+                  </div>
+                  <div id="compass-bearing" class="compass soft">
+                    <div class="n"></div>
+                    <div class="s"></div>
+                    <div class="w"></div>
+                    <div class="e"></div>
+                  </div>
+                </div>
+
             </div>
-          </div> -->
+            
+            <div class="pair col flex align-center">
+            
+              <div class="pair col flex">
+                <h4 class="label">Zoom</h4>
+                <p id="zoom">0.00</p>
+              </div>
+              <div class="flex">
+                <a class="round soft" id="zoom-in">+</a>
+                <a class="round soft" id="zoom-out">-</a>
+              </div>
+            
+            </div>
 
-        </div>
+            <div class="pair col flex align-center">
+            
+              <div class="pair col flex justify-flex-start stretch">
+                <h4>Hill Shading</h4>
+                <label class="switch">
+                  <input id="hill-shading" type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            
+            </div>
 
-        <div class="single bricklayer">
-          <!-- <img src="../map-captures/001.png"/>
-          <img src="../map-captures/002.png"/>
-          <img src="../map-captures/003.png"/>
-          <img src="../map-captures/004.png"/>
-          <img src="../map-captures/005.png"/>
-          <img src="../map-captures/006.png"/>
-          <img src="../map-captures/007.png"/>
-          <img src="../map-captures/008.png"/>
-          <img src="../map-captures/009.png"/>
-          <img src="../map-captures/010.png"/>
-          <img src="../map-captures/011.png"/>
-          <img src="../map-captures/012.png"/>
-          <img src="../map-captures/013.png"/>
-          <img src="../map-captures/014.png"/>
-          <img src="../map-captures/015.png"/>
-          <img src="../map-captures/016.png"/>
-          <img src="../map-captures/017.png"/>
-          <img src="../map-captures/018.png"/>
-          <img src="../map-captures/019.png"/>
-          <img src="../map-captures/020.png"/>
-          <img src="../map-captures/021.png"/>
-          <img src="../map-captures/022.png"/>
-          <img src="../map-captures/023.png"/>
-          <img src="../map-captures/024.png"/>
-          <img src="../map-captures/025.png"/>
-          <img src="../map-captures/026.png"/>
-          <img src="../map-captures/027.png"/>
-          <img src="../map-captures/028.png"/>
-          <img src="../map-captures/029.png"/>
-          <img src="../map-captures/030.png"/>
-          <img src="../map-captures/031.png"/>
-          <img src="../map-captures/032.png"/>
-          <img src="../map-captures/033.png"/>
-          <img src="../map-captures/034.png"/>
-          <img src="../map-captures/035.png"/>
-          <img src="../map-captures/036.png"/>
-          <img src="../map-captures/037.png"/>
-          <img src="../map-captures/038.png"/>
-          <img src="../map-captures/039.png"/>
-          <img src="../map-captures/040.png"/>
-          <img src="../map-captures/041.png"/>
-          <img src="../map-captures/042.png"/>
-          <img src="../map-captures/043.png"/>
-          <img src="../map-captures/044.png"/>
-          <img src="../map-captures/045.png"/>
-          <img src="../map-captures/046.png"/>
-          <img src="../map-captures/047.png"/>
-          <img src="../map-captures/048.png"/>
-          <img src="../map-captures/049.png"/>
-          <img src="../map-captures/050.png"/>
-          <img src="../map-captures/051.png"/>
-          <img src="../map-captures/052.png"/>
-          <img src="../map-captures/053.png"/>
-          <img src="../map-captures/054.png"/>
-          <img src="../map-captures/055.png"/>
-          <img src="../map-captures/056.png"/>
-          <img src="../map-captures/057.png"/>
-          <img src="../map-captures/058.png"/>
-          <img src="../map-captures/059.png"/>
-          <img src="../map-captures/060.png"/> -->
-        </div>
+          </div>
+        </article>
 
-        <h2>Advanced</h2>
-        <div class="">
+        <article class="card">
+        <h2 class="single-heading">Assortments</h2>
+        <div class="single flex col stretch">
+          <div class="flex min-padding justify-flex-start flex-wrap">
+            <div class="pair">
+              <h4>Img Pos</h4>
+              <p id="assortment-target">X, Y</p>
+            </div>
+            <button class="min-margin grow soft" onclick="reInit()">Reinit</button>
+            <button class="min-margin grow soft" onclick="redraw()">Redraw</button>
+            <button class="min-margin grow soft" onclick="destroy()">Destroy</button>
+          </div>
+   
+      </article>
+      
+      <article class="card">
+        <h2 class="single-heading">Advanced</h2>
+        <div class="single">
           <a class="btn btn--iris" id="animate">Replay</a>
-          <a class="btn btn--iris">Second</a>
-          <a class="btn btn--iris">Third</a>
         </div>
-        
+      </article>
 
       </div><!-- END OF PADDING-WRAPPER -->
       
     </div>
   </div>
-  <script src="../js/bricklayer.min.js"></script>
-  <script src="../js/geocoder.js"></script>
-  <script src="../js/turf.min.js" charset="utf-8"></script>
-  <script src="routes.js"></script>
+  <!-- <script src="js/bricklayer.min.js"></script> -->
+  <script src="js/geocoder.js"></script>
+  <script src="js/turf.min.js" charset="utf-8"></script>
+  <script src="routes/routes.js"></script>
 </body>

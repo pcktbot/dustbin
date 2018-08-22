@@ -1,0 +1,61 @@
+<head>
+ <style>
+  @font-face {
+    font-family: AtlasGrotesk;
+    src: url('./atlas.woff2');
+    font-style: normal;
+    font-weight: 700;
+  }
+  #intro {
+    margin: 50px auto 50px;
+  }
+  h1 {
+    font-family: "AtlasGrotesk";
+    width: 100%;
+    text-align: center;
+    color: #222;
+    transform: translate(26px,0);
+    transition: transform 1s;
+  }
+  .key {
+    color: #009f29;
+    transition: color 1s;
+  }
+  h1 span.end {
+    background: #fff;
+    transform: translate(-52px, 0);
+  }
+  h1 span {
+    display: inline-block;
+    transition: transform 1s;
+  }
+  h1 span.end.moved {
+    transform: translate(-8px, 0);
+  }
+  h1.moved .key {
+    color: #ff7400;
+  }
+ </style> 
+</head>
+<body>
+
+  <div id="intro">
+    <h1 class="desktop moved"><!-- l -->
+      <span>How</span>
+      <span class="un key">un</span>
+      <span class="end moved"><!-- u -->
+        <span class="key">popular</span>
+        is Donald Trump?
+      </span>
+    </h1>
+  </div>
+  <script>
+    var u = document.querySelector('#intro .desktop .end'), l = document.querySelector('#intro h1.desktop'); 
+    function h() {
+      console.log('h fired');
+      (l.classList.contains('moved'),
+      u.classList.contains('moved')) ? (u.classList.remove('moved'), l.classList.remove('moved')) : (u.classList.add('moved'), l.classList.add('moved'))
+    }
+    window.setInterval(h, 3500);
+  </script>
+</body>

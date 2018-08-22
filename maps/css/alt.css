@@ -1,0 +1,15 @@
+:root {
+  --energy-yellow: #F7D554;
+}
+.btn-link-wrap {
+  background-image: url('/new.png');
+  background-repeat: no-repeat;
+}
+.body-wrap {
+  background: url('/pattern-grid.png');
+  background-size: 105rem;
+}
+
+.window {
+  box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}

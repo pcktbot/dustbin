@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 .stage {
-  perspective: 1000px;
+  perspective: 1800px;
   perspective-origin: center;
   position: relative;
   width: 500px; margin: 10px auto;
@@ -30,7 +30,7 @@ body {
 .card-shadow {
   position: absolute;
   background-color: var(--shadow);
-  width: 300px; height: 300px;
+  width: 300px; height: 400px;
 }
 .lt-red {
   background-color: var(--light-red);
@@ -41,9 +41,9 @@ body {
 }
 .top {
   transform: 
-    rotateX(60deg) rotateY(0) rotateZ(-5deg) 
+    rotateX(30deg) rotateY(0deg) rotateZ(-5deg) 
     translateX(0) translateY(0) translateZ(-200px)
-    rotate(15deg);
+    rotate(45deg);
 }
 .red {
   background-color: var(--mid-red);
@@ -56,7 +56,7 @@ body {
   transform: 
     rotateX(60deg) rotateY(0) rotateZ(-5deg) 
     translateX(0) translateY(0) translateZ(-400px)
-    rotate(15deg);
+    rotate(45deg);
 }
 .dark-red {
   background-color: var(--dark-red);

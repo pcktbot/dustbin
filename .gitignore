@@ -1,1 +1,5 @@
 node_modules/
+.env
+localhost.cert
+localhost.key
+

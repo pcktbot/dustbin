@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dustbin</title>
+    <!-- START OF INCLUDES -->
+    <script src="../js/lib/jquery-3.3.1.min.js"></script>
+    <link href="../css/lib/normalize.css" rel="stylesheet">
+    <link href="../css/default.css" rel="stylesheet">
+    <!-- END OF INCLUDES -->
+    <link href="../css/index.css" rel="stylesheet">
+  </head>
+  <body class="flex col stretch justify-flex-start">
+    <header>
+      <nav class="flex" id="global"></nav>
+    </header>
+    <div class="grow" id="main"></div>
+    <footer class="flex">
+      <div class="flex col">
+        <span id="score">00</span>
+        <span class="">
+          <button>+</button>
+          <button>-</button>
+        </span>
+      </div>
+      <div class="flex col grow">
+        <span>2018 David Nave</span>
+      </div>
+      <div class="col">
+        <span class="">
+          <button id="update-nav">Update Nav</button>
+        </span>
+      </div>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

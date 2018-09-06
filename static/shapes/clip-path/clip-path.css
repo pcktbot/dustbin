@@ -1,0 +1,25 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid rebeccapurple;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+
+}
+.bell {
+  width: 300px; 
+  height: 500px;
+  background-color: rebeccapurple;
+  clip-path: polygon(
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    0% 50%
+  );
+}

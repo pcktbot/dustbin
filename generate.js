@@ -1,3 +1,4 @@
+'use strict';
 const fs = require('fs');
 const pug = require('pug');
 
@@ -5,17 +6,12 @@ const pug = require('pug');
 
 const compile = pug.conpileFile('template.pug');
 
-var html = compile({
+let html = compile({
   projectName: 'newProject',
-  cssFileName: projectName.downcase() + '.css',
-   
+  cssFileName: this.projectName.downcase() + '.css',
+  jsFileName: this.projectName.downcase() + '.js'
 });
 
-// fs needs to to read the directory for a list of images
-// loop through each image and add the <img> element for each depending on the gallery library in use.
-
-var imgArr = fs.readdirSync('.');
-var imgElements = [], i;
-for (i=0; i<imgArr.length; i++) {
-  imgElements.push('<img src="' + imgArr[i] + '" alt=""/>');
-}
+// mkdir projectName
+// add files from the compile
+// add default libraries like jquery, socket, default css, normalize

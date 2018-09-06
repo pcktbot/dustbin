@@ -1,0 +1,29 @@
+<head>
+  <title>Layered Gradient Shapes</title>
+  <link href="layered.css" rel="stylesheet">
+</head>
+<body class="light">
+<div>
+  <svg height="100%" width="100%">
+    <defs>
+      <linearGradient id="blue" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="40%" style="stop-color:#4BB5C8;stop-opacity:0.9" />
+          <stop offset="100%" style="stop-color:#13548C;stop-opacity:0.6" />
+        </linearGradient>
+      <linearGradient id="mono" x1="50%" y1="0%" x2="50%" y2="100%">
+        <stop offset="40%" style="stop-color:#542E91;stop-opacity:0.9" />
+        <stop offset="100%" style="stop-color:#2B664F;stop-opacity:0.6" />
+      </linearGradient>
+      <linearGradient id="pink" x1="0%" y1="100%" x2="100%" y2="100%">
+        <stop offset="20%" style="stop-color:#EC4E8B;stop-opacity:0.8"/>
+        <stop offset="80%" style="stop-color: #F18C30;stop-opacity: 0.8"/>
+      </linearGradient>
+    </defs>
+    <circle cx="50%" cy="42%" r="170" stroke="url(#blue)" stroke-width="70" fill="transparent" />
+    <circle cx="50%" cy="47%" r="170" stroke="url(#blue)" stroke-width="70" fill="transparent" />
+    <circle cx="50%" cy="55%" r="170" stroke="url(#pink)" stroke-width="70" fill="transparent" />
+    <circle cx="50%" cy="50%" r="170" stroke="url(#mono)" stroke-width="70" fill="transparent" />
+    
+  </svg> 
+</div>
+</body>

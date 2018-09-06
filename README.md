@@ -1,5 +1,22 @@
-# dustbin
+# Dustbin
 
-Best to start an HTTP server here with this directory as its web root. I am slowly reworking the URLs to reference shared asset files.
+A collection of mostly original web design elements and experiments to aid in my personal learning. 
 
-The most interesting stuff is in the `/menus` or `/grid` or `/shapes`. Most of it is my own, but there are some tutorial stuff or recreations.
+## Install
+
+``` bash
+git clone https://github.com/pcktbot/dustbin.git
+npm install
+npm start
+```
+
+## Features
+
+This was just a collection of static pages, but as of Sept 2018, it is a collection of static pages managed by an Express.js server. 
+
+To Do
+- Create generator script for taking a single argument and creating a new directory and basic static files with Express router to get there.
+- Use an `fs`-type solution to keep track of all the files and create global navigation for them.
+- Add markdown support to static rendering engine.
+- Add PWA elements, including Service Worker, and code splitting to avoid loading everything all at once. 
+- Insert shared resources into pages dynamically.

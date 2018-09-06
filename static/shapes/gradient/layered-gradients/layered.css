@@ -1,0 +1,38 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+}
+.light { background: #d8d8d8 }
+.purple { 
+  /* background: 
+  linear-gradient(180deg, RGBA(79,60,139,1) 30%, RGBA(79,60,139,.5) 50%, transparent 70%),
+  linear-gradient(100deg, RGBA(215,75,143,1.00) 25%, RGBA(215,72,136,1) 30%, RGBA(238,149,61,1.00)); */
+  transform: translateX(-200px)
+  translateY(-200px);
+  /* z-index: -1; */
+
+}
+.purple::after {
+  box-shadow: 0 0 0 80px RGBA(215,75,143,.8);
+}
+.blue {
+  transform: translateX(-200px)
+  translateY(-260px);
+  /* background-color: RGBA(65,175,232,1.00); */
+  background: 
+    linear-gradient(180deg, RGBA(65,175,232,1.00) 30%, RGBA(0,174,80,1.00) 50% );
+  opacity: .8;
+  z-index: -2;
+  /* clip-path: ellipse(40% 45% at 50% 50%); */
+}
+.blue::after {
+  background-color: white;
+  /* box-shadow: 0 -40px 0 80px RGBA(245,167,50,.9); */
+  
+}

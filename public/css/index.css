@@ -1,0 +1,5 @@
+/* for Home page /static/index.html */
+body {
+  width: 100%;
+  min-height: 100vh;
+}

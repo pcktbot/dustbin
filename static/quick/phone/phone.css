@@ -1,0 +1,31 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  font-family: monospace;
+  font-size: 100%;
+}
+body {
+  background-color: RGBA(251,216,51,1.00);
+  width: 100%;
+  min-height: 100vh;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeate(4,1fr);
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px);
+  grid-gap: 30px;
+  width: 400px; height: 500px;
+}
+button {
+  font-size: 5em;
+  border-radius: 50%;
+  background-color: RGBA(214,225,237,1.00);
+  box-shadow: 0 0 2px 4px RGBA(43,32,20,1.00);
+}

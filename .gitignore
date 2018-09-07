@@ -1,5 +1,11 @@
 node_modules/
-.env
-localhost.cert
-localhost.key
-
+*.env
+*.key
+*.pem
+*.csr
+*.cnf
+*.key
+*.crt
+*.slr
+*.srl
+*.ext

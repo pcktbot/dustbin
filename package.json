@@ -41,6 +41,7 @@
   "homepage": "https://github.com/pcktbot/dustbin#readme",
   "dependencies": {
     "animejs": "^2.2.0",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "eslint": "^5.5.0",

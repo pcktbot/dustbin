@@ -1,0 +1,111 @@
+:root {
+  --size: 300px;
+}
+body {
+  margin: 0;
+  background-color: #A6A2BB;
+  background: radial-gradient(
+    ellipse 50% 30% at 50% 280px,
+    RGBA(186,57,180,.3) 10%,
+    transparent 70%
+    ), linear-gradient(
+    to right,
+    #AF879F 35%,
+    #A6A2BB 55%,
+    #96A2D2 85%
+  );
+  width: 100%;
+  height: 100%;
+}
+.stage {
+  width: var(--size);
+  height: var(--size);
+  margin: 150px auto 0;
+  perspective: 1200px;
+  perspective-origin: 50% 50%; 
+  /* display: inline-block; */
+}
+.sphere {
+  position: relative;
+  display: block;
+  background-color: RGBA(209,180,217,1.00);
+  background: linear-gradient(
+    65deg,
+    transparent 70%,
+    RGBA(144,200,255,.7) 80%,
+    RGBA(144,200,255,1.00) 90%
+  ), radial-gradient(
+    ellipse 85% 100% at 80% 55%,
+    RGBA(128,223,171,.65) 20%,
+    transparent 65%
+  ), radial-gradient(
+    ellipse 55% 65% at 35% 55%,
+    RGBA(178,176,118,.8) 20%,
+    RGBA(178,176,118,.2) 55%,
+    RGBA(178,176,118,0) 80%
+  ), radial-gradient(
+    circle at 10% 55%,
+    RGBA(212,90,103,.8) 25%,
+    transparent 65%
+  ), radial-gradient(
+    circle at 50% 50%,
+    RGBA(209,180,217,.8) 99%,
+    transparent 100%
+  ); 
+  border-radius: 50%;
+  height: var(--size);
+  width: var(--size);
+  margin: 0;
+}
+.sphere::after {
+  /* content:''; */
+  position: absolute;
+  left: calc(50% - (var(--size) / 2));
+  width: var(--size);
+  height: 100px;
+  border-radius: 50%;
+  background-color: RGBA(142,110,129,1.00);
+}
+.sphere .shadow {
+  position: absolute;
+  width: calc(var(--size) * 2);
+  height: calc(var(--size) * 2);
+  border-radius: 50%;
+  z-index: -1;
+}
+.dark {
+  background: radial-gradient(
+      circle at 50% 50%, 
+      RGBA(132,100,119,1), 
+      RGBA(142,110,129,0) 60%
+  );
+  transform: rotateX(65deg) 
+  translateX(-150px) translateY(0px) translateZ(0px);
+}
+.green {
+  background: radial-gradient(
+    circle at 50% 50%,
+    RGBA(64,147,151,.7),
+    RGBA(64,147,151,0) 20%
+  );
+  transform: rotateX(65deg) 
+  translateX(-130px) translateY(-15px) translateZ(0px);
+}
+.blue {
+  background: radial-gradient(
+    circle at 70% 50%,
+    RGBA(90,213,249,.5),
+    RGBA(90,213,249,0) 15%,
+  );
+  transform: rotateX(70deg) translateZ(-150px);
+}
+.red {
+  background: radial-gradient(
+    ellipse 90% 70% at 50% 50%,
+    RGBA(255,41,71,.8),
+    RGBA(212,90,103,.2) 20%,
+    RGBA(212,90,103,0) 30%
+  );
+  transform: rotateX(65deg) 
+  translateX(-165px) translateY(-15px) translateZ(0px);
+}

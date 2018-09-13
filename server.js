@@ -3,44 +3,35 @@ require('dotenv').config();
 const fs = require('fs');
 const express = require('express');
 const app = express();
-const sslOpts = {
-  key: fs.readFileSync('./server.key'),
-  cert: fs.readFileSync('./server.crt')
-};
-const server = require('https').createServer(sslOpts, app);
+const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const path = require('path');
-const Push = require('push.js');
-const reloadify = require('reloadify');
-const sendevent = require('sendevent');
-const watch = require('watch');
-
-const ejs = require('ejs');
+const cookieParser = require('cookie-parser');
 
 server.listen(4200, () => {
   console.log('listening on *:' + server.address().port);
 });
 
-// reloadify(app, __dirname + '/static');
-// reloadify(app, __dirname + '/public');
-app.use((req, res, next) => {
-  if (req.secure) {
-    next();
-  } else {
-    res.redirect('https://' + req.headers.host + req.url); 
-  }
-});
+app.set('views', path.join(__dirname + 'views'));
+app.set('view engine', 'ejs');
+
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '/public'), {
+  extensions: ['css', 'js']
+}));
 app.use(express.static(path.join(__dirname,'/static'), {
-  extensions: ['html', 'htm', 'json']
+  extensions: ['html', 'htm', 'json', 'css', 'js']
 }));
 
 
 app.get('/', (req, res) => {
-  res.sendFile('/index.html');
+  // res.sendFile('/index.html');
+  res.render('pages/index');
 });
+
 
 io.on('connection', socket => {
   console.log('client connected');
@@ -60,6 +51,7 @@ io.on('connection', socket => {
         return;
       }
       res = res.filter(subDir => !(/(^|\/)\.[^\/\/.]/g).test(subDir));
+      console.log(res);
       socket.emit('nav items', {
         navArr: res,
         status: 'complete'

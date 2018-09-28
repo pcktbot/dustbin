@@ -1,0 +1,8 @@
+*.babelrc
+*.env
+*.eslintrc.js
+*.gitignore
+Procfile
+*.eslintignore
+node_modules/*
+.vscode/*

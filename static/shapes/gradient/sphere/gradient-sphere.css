@@ -95,7 +95,7 @@ body {
   background: radial-gradient(
     circle at 70% 50%,
     RGBA(90,213,249,.5),
-    RGBA(90,213,249,0) 15%,
+    RGBA(90,213,249,0) 15%
   );
   transform: rotateX(70deg) translateZ(-150px);
 }

@@ -10,3 +10,4 @@ node_modules/
 *.srl
 *.ext
 models/*
+.vscode/

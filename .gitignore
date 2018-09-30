@@ -9,5 +9,5 @@ node_modules/
 *.slr
 *.srl
 *.ext
-models/*
+localhost-ssl/*
 .vscode/

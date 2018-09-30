@@ -4,14 +4,14 @@ const nodeExternals = require('webpack-node-externals')
 
 module.exports = [
   {
-    entry: [
-      'babel-polyfill',
-      path.resolve(__dirname, 'src/server.js')
-    ],
+    entry: {
+      polyfill: 'babel-polyfill',
+      server: path.resolve(__dirname, 'src/server.js')
+    },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js',
-      publicPath: '/'
+      filename: 'server.bundle.js',
+      publicPath: '/assets/'
     },
     mode: 'production',
     devtool: '#source-map',

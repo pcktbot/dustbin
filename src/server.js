@@ -1,5 +1,6 @@
 'use strict'
 require('dotenv').config()
+const version = require('./js/version')
 const fs = require('fs')
 const express = require('express')
 const app = express()
@@ -10,18 +11,29 @@ const cookieParser = require('cookie-parser')
 
 server.listen(4200, () => {
   console.log('listening on *:' + server.address().port)
+  console.log('view at http://localhost:4200')
+  console.log('server ' + version)
 })
 
-app.set('views', path.join(__dirname, 'views'))
+/**
+ * POSTGRES DATABASE MODELS
+ */
+const { client } = require('../models').db
+client.connect()
+client.end(err => {
+  if (err) {
+    console.log('error on exit.')
+  } else {
+    console.log('disconnected successfully.')
+  }
+})
+/**
+ * HTTP
+ */
 app.set('view engine', 'ejs')
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
-
-/**
- * STATIC ROUTING PATHS
- */
 app.use(express.static(path.join(__dirname, 'public'), {
   extensions: ['css', 'js']
 }))
@@ -32,14 +44,13 @@ app.use(express.static(path.join(__dirname, 'test'), {
   extensions: ['js']
 }))
 
-/**
- * GET HOME PAGE
- */
 app.get('/', (req, res) => {
-  // res.sendFile('/index.html')
   res.render('pages/index')
 })
 
+/**
+ * How bout some streaming interactions betwen server and client?
+ */
 io.on('connection', socket => {
   console.log('client connected')
   socket.on('disconnect', () => {
